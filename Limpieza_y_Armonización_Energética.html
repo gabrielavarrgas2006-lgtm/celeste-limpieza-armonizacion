@@ -14,12 +14,23 @@
     <meta property="og:title" content="Celeste Universo Consciente · Limpieza y Armonización Energética">
     <meta property="og:description" content="Trabajamos energéticamente sobre la vibración de tus relaciones, persona y espacios para disolver cargas sutiles y recuperar la paz.">
 
-    <!-- Styles & Fonts CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Speed & Performance Preconnect / DNS-Prefetch -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- Google Fonts with display=swap and Non-blocking Async Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Scripts & Styles CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
     
     <script>
         tailwind.config = {
@@ -511,8 +522,12 @@
     </div>
 
     <script>
-        // Inicializar Iconos Lucide
-        lucide.createIcons();
+        // Inicialización Diferida e Inmediata de Iconos Lucide
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
     </script>
 </body>
 </html>
