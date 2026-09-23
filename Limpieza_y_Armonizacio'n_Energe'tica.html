@@ -65,386 +65,190 @@
             }
         }
     </script>
-    <style>
-        :root {
-            --rosa-pastel-claro: #FAF0F5;
-            --rosa-suave: #F4E3EC;
-            --lavanda-suave: #CFC2E5;
-            --lila-pastel: #BFAED6;
-            --deep-purple: #180B2B;
-            --rich-plum: #2A1245;
-            --mystic-purple: #3B1A60;
-        }
-
-        *, ::before, ::after {
-            box-sizing: border-box;
-        }
-
-        html, body {
-            overflow-x: hidden;
-            width: 100%;
-            max-width: 100vw;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #F7EBEF 0%, #F4E3EC 30%, #CFC2E5 70%, #BFAED6 100%);
-            background-attachment: fixed;
-            color: #2A1245;
-            font-size: 18px;
-            line-height: 1.7;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-weight: 500;
-        }
-
-        /* 🌸 TARJETAS Y CONTENEDORES - Frosted Glass Pastel (Sin backdrop-filter blur para máximo rendimiento) */
-        .glass-card-dark, .featured-card {
-            background: linear-gradient(135deg, rgba(250, 240, 245, 0.94) 0%, rgba(244, 227, 236, 0.88) 50%, rgba(207, 194, 229, 0.58) 100%) !important;
-            border: 1.5px solid #FFF5FA !important;
-            box-shadow: 0 10px 25px -8px rgba(59, 26, 96, 0.08) !important;
-            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
-        }
-
-        .glass-card-dark:hover, .featured-card:hover {
-            transform: translateY(-3px) !important;
-            border-color: #FAF0F5 !important;
-            box-shadow: 0 15px 30px -8px rgba(59, 26, 96, 0.15) !important;
-        }
-
-        /* ✨ ÍCONOS Y EMOTICONES CON DEGRADADO PASTEL Y BORDE BLANCO */
-        .glass-card-dark .w-12, 
-        .glass-card-dark .w-8, 
-        .glass-card-dark .w-10, 
-        .glass-card-dark .w-14,
-        .glass-card-dark .w-9,
-        .featured-card .w-12,
-        .icon-badge-pastel {
-            background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 50%, #CFC2E5 100%) !important;
-            border: 1.5px solid #FFFFFF !important;
-            box-shadow: 0 4px 12px -2px rgba(59, 26, 96, 0.12) !important;
-            color: #3B1A60 !important;
-        }
-
-        .glass-card-dark svg, 
-        .glass-card-dark i,
-        .featured-card svg,
-        .featured-card i,
-        .icon-badge-pastel svg,
-        .icon-badge-pastel i {
-            color: #3B1A60 !important;
-            stroke: #3B1A60 !important;
-        }
-
-        /* 🪻 TIPOGRAFÍA Y DEGRADADOS DE COLOR DE TEXTO */
-        h1, h2 {
-            color: #180B2B !important;
-            font-family: 'Cinzel', serif !important;
-            font-weight: 700 !important;
-        }
-
-        h3, h4, h5, h6 {
-            color: #180B2B !important;
-        }
-
-        p, li, label, div {
-            color: #2A1245;
-        }
-
-        .text-white {
-            color: #180B2B !important;
-        }
-
-        .text-mystic-100, 
-        .text-mystic-200, 
-        .text-mystic-100\/80, 
-        .text-mystic-100\/90, 
-        .text-mystic-200\/80, 
-        .text-mystic-200\/90 {
-            color: #2A1245 !important;
-        }
-
-        .text-mystic-300, 
-        .text-mystic-400, 
-        .text-mystic-500 {
-            color: #3B1A60 !important;
-            font-weight: 600 !important;
-        }
-
-        /* Subtítulos, Badges y Pill Tags */
-        .bg-mystic-800\/80, 
-        .bg-mystic-900\/90, 
-        .bg-mystic-900\/80, 
-        .bg-mystic-950\/80, 
-        .bg-mystic-900\/70,
-        .bg-mystic-950 {
-            background: linear-gradient(135deg, rgba(250, 240, 245, 0.95) 0%, rgba(244, 227, 236, 0.90) 100%) !important;
-            border: 1.5px solid #FFF5FA !important;
-            color: #3B1A60 !important;
-            box-shadow: 0 4px 15px rgba(59, 26, 96, 0.06) !important;
-        }
-
-        .gradient-title {
-            background: linear-gradient(135deg, #180B2B 0%, #2A1245 60%, #3B1A60 100%) !important;
-            -webkit-background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-        }
-
-        .gradient-subtitle {
-            background: linear-gradient(135deg, #180B2B 0%, #3B1A60 100%) !important;
-            -webkit-background-clip: text !important;
-            -webkit-text-fill-color: transparent !important;
-        }
-
-        .text-glow {
-            text-shadow: 0 0 15px rgba(207, 194, 229, 0.6) !important;
-        }
-
-        .aura-glow-vibrant {
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.6;
-            background: radial-gradient(circle, rgba(250, 240, 245, 0.7) 0%, rgba(244, 227, 236, 0.3) 50%, transparent 70%) !important;
-        }
-
-        .btn-purple-vibrant {
-            background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 50%, #CFC2E5 100%) !important;
-            color: #3B1A60 !important;
-            border: 1.5px solid #FFFFFF !important;
-            box-shadow: 0 6px 18px rgba(59, 26, 96, 0.12) !important;
-            transition: all 0.25s ease !important;
-            font-weight: 700 !important;
-        }
-
-        .btn-purple-vibrant:hover {
-            background: linear-gradient(135deg, #F4E3EC 0%, #CFC2E5 50%, #BFAED6 100%) !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 10px 25px rgba(59, 26, 96, 0.18) !important;
-        }
-
-        .btn-whatsapp-vibrant {
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important;
-            color: #ffffff !important;
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35) !important;
-            transition: all 0.3s ease !important;
-        }
-
-        .btn-whatsapp-vibrant:hover {
-            background: linear-gradient(135deg, #2bf075 0%, #15a090 100%) !important;
-            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5) !important;
-            transform: translateY(-2px) !important;
-        }
-
-        /* Hero Orb Styling for Soft Pastel Theme */
-        .animate-orb .w-24, .animate-orb .w-28 {
-            background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 40%, #CFC2E5 100%) !important;
-            box-shadow: 0 0 35px rgba(207, 194, 229, 0.7) !important;
-        }
-
-        .animate-orb .bg-mystic-950 {
-            background: #FAF0F5 !important;
-            border-color: #CFC2E5 !important;
-        }
-
-        @keyframes orbGlow {
-            0%, 100% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.08); opacity: 0.95; }
-        }
-
-        .animate-orb {
-            animation: orbGlow 5s ease-in-out infinite;
-        }
-    </style>
+    
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <style id="custom-redesign-styles">
-        :root {
-            --lila-pastel-1: #B8A0D6;
-            --lila-pastel-2: #A98BCB;
-            --lila-pastel-3: #9678BA;
-            --rosa-pastel-1: #F1C9DB;
-            --rosa-pastel-2: #E8B7CF;
-            --rosa-pastel-3: #F6DCE8;
-            --text-dark-plum: #32174F;
-            --text-medium-plum: #43235F;
-        }
+    
 
-        html, body {
-            overflow-x: hidden !important;
-            width: 100% !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            background: linear-gradient(135deg, #B8A0D6 0%, #A98BCB 35%, #E8B7CF 70%, #9678BA 100%) !important;
-            background-attachment: fixed !important;
-            color: var(--text-dark-plum) !important;
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-        }
+    <style id="celeste-definitive-lila-rosa-theme">
+    :root {
+        --lila-pastel-base: #B8A0D6;
+        --lila-pastel-mid: #A98BCB;
+        --lila-pastel-deep: #9678BA;
+        --rosa-pastel-base: #F1C9DB;
+        --rosa-pastel-mid: #E8B7CF;
+        --rosa-pastel-soft: #F6DCE8;
+        --text-plum-dark: #32174F;
+        --text-plum-mid: #43235F;
+    }
 
-        /* Luminous Background Glow Blobs */
-        body::before {
-            content: '';
-            position: fixed;
-            top: -15%;
-            left: -15%;
-            width: 65vw;
-            height: 65vw;
-            background: radial-gradient(circle, rgba(241, 201, 219, 0.45) 0%, rgba(184, 160, 214, 0) 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: linear-gradient(135deg, #B8A0D6 0%, #A98BCB 35%, #E8B7CF 70%, #9678BA 100%) !important;
+        background-attachment: fixed !important;
+        color: #32174F !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        font-size: 18px;
+        line-height: 1.7;
+    }
 
-        body::after {
-            content: '';
-            position: fixed;
-            bottom: -15%;
-            right: -15%;
-            width: 70vw;
-            height: 70vw;
-            background: radial-gradient(circle, rgba(232, 183, 207, 0.45) 0%, rgba(150, 120, 186, 0) 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
+    /* Luminous Background Ambient Blobs */
+    body::before {
+        content: '';
+        position: fixed;
+        top: -15%;
+        left: -15%;
+        width: 65vw;
+        height: 65vw;
+        background: radial-gradient(circle, rgba(246, 220, 232, 0.55) 0%, rgba(184, 160, 214, 0) 70%);
+        pointer-events: none;
+        z-index: 0;
+    }
 
-        /* Canvas Particle Container */
-        #starCanvas {
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100vw !important;
-            height: 100vh !important;
-            pointer-events: none !important;
-            z-index: 1 !important;
-        }
+    body::after {
+        content: '';
+        position: fixed;
+        bottom: -15%;
+        right: -15%;
+        width: 70vw;
+        height: 70vw;
+        background: radial-gradient(circle, rgba(232, 183, 207, 0.55) 0%, rgba(150, 120, 186, 0) 70%);
+        pointer-events: none;
+        z-index: 0;
+    }
 
-        /* Content Z-index */
-        header, main, footer, section, div, nav {
-            position: relative;
-            z-index: 2;
-        }
+    /* ✨ Canvas Particles for Stars and Light Sparkles */
+    #starCanvas {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+    }
 
-        /* 🌸 TARJETAS Y CONTENEDORES - Base Rosa Pastel + Lila Pastel */
-        .glass-card-dark, .featured-card, div[class*="bg-white"], div[class*="bg-opacity"], .bg-purple-950\/80, .bg-mystic-950\/80 {
-            background: linear-gradient(145deg, rgba(246, 220, 232, 0.96) 0%, rgba(241, 201, 219, 0.93) 50%, rgba(232, 183, 207, 0.90) 100%) !important;
-            border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
-            box-shadow: 0 15px 35px -8px rgba(50, 23, 79, 0.20), 0 0 20px 0 rgba(241, 201, 219, 0.30) !important;
-            border-radius: 1.25rem !important;
-            color: var(--text-dark-plum) !important;
-            backdrop-filter: blur(10px) !important;
-            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        }
+    header, main, footer, section, div, nav {
+        position: relative;
+        z-index: 2;
+    }
 
-        .glass-card-dark:hover, .featured-card:hover {
-            transform: translateY(-5px) !important;
-            box-shadow: 0 22px 45px -10px rgba(50, 23, 79, 0.28), 0 0 25px 0 rgba(232, 183, 207, 0.45) !important;
-            border-color: #FFFFFF !important;
-        }
+    /* 🌸 TARJETAS Y CONTENEDORES - Base Rosa Pastel + Lila Pastel (Depth & Shadow) */
+    .glass-card-dark, .featured-card, div[class*="glass-card"], div[class*="bg-mystic"], div[class*="bg-purple"] {
+        background: linear-gradient(145deg, rgba(246, 220, 232, 0.96) 0%, rgba(241, 201, 219, 0.93) 50%, rgba(232, 183, 207, 0.90) 100%) !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+        box-shadow: 0 15px 35px -8px rgba(50, 23, 79, 0.22), 0 0 20px 0 rgba(241, 201, 219, 0.35) !important;
+        border-radius: 1.5rem !important;
+        color: #32174F !important;
+        backdrop-filter: blur(12px) !important;
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
 
-        /* Text colors override for maximum legibility */
-        p, span, li, td, th, label, div {
-            color: var(--text-dark-plum);
-        }
+    .glass-card-dark:hover, .featured-card:hover {
+        transform: translateY(-5px) !important;
+        box-shadow: 0 22px 45px -10px rgba(50, 23, 79, 0.30), 0 0 25px 0 rgba(232, 183, 207, 0.50) !important;
+        border-color: #FFFFFF !important;
+    }
 
-        .text-purple-200, .text-purple-300, .text-slate-300, .text-slate-400, .text-gray-300, .text-gray-400, .text-mystic-300, .text-mystic-200 {
-            color: var(--text-medium-plum) !important;
-        }
+    /* Text Colors for 100% Crisp Legibility */
+    p, span, li, td, th, label, div {
+        color: #32174F !important;
+    }
 
-        /* 🪻 HEADINGS & TIPOGRAFÍA */
-        h1, h2, h3, h4, .font-serif {
-            color: var(--text-dark-plum) !important;
-            font-family: 'Cormorant Garamond', 'Cinzel', serif !important;
-            font-weight: 700 !important;
-            letter-spacing: -0.01em !important;
-            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5) !important;
-        }
+    .text-mystic-100, .text-mystic-200, .text-mystic-300, .text-purple-200, .text-purple-300, .text-slate-300, .text-slate-400, .text-white {
+        color: #32174F !important;
+    }
 
-        h1 {
-            font-size: clamp(2.2rem, 5vw, 3.5rem) !important;
-            line-height: 1.15 !important;
-        }
+    /* 🪻 HEADINGS - Serif Modern Refined (Cormorant Garamond / Cinzel) */
+    h1, h2, h3, h4, .font-serif, .gradient-title, .gradient-subtitle {
+        color: #32174F !important;
+        font-family: 'Cormorant Garamond', 'Cinzel', serif !important;
+        font-weight: 700 !important;
+        letter-spacing: -0.01em !important;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+        background: none !important;
+        -webkit-text-fill-color: #32174F !important;
+    }
 
-        h2 {
-            font-size: clamp(1.8rem, 4vw, 2.75rem) !important;
-            line-height: 1.2 !important;
-        }
+    h1 {
+        font-size: clamp(2.3rem, 5.5vw, 3.8rem) !important;
+        line-height: 1.15 !important;
+    }
 
-        h3 {
-            font-size: clamp(1.3rem, 3vw, 1.85rem) !important;
-        }
+    h2 {
+        font-size: clamp(1.85rem, 4.2vw, 2.85rem) !important;
+        line-height: 1.2 !important;
+    }
 
-        /* Remove transparent background text clipping that hid title text */
-        .bg-clip-text, [class*="bg-gradient-to"] {
-            color: var(--text-dark-plum) !important;
-            -webkit-text-fill-color: var(--text-dark-plum) !important;
-            background: none !important;
-        }
+    h3 {
+        font-size: clamp(1.35rem, 3.2vw, 1.95rem) !important;
+    }
 
-        /* ✨ ÍCONOS Y EMOTICONES CON DEGRADADO PASTEL */
-        .glass-card-dark .w-12, 
-        .glass-card-dark .w-8, 
-        .glass-card-dark .w-10, 
-        .glass-card-dark .w-14,
-        .glass-card-dark .w-9,
-        .featured-card .w-12,
-        .icon-badge-pastel,
-        .w-12.h-12,
-        .w-14.h-14,
-        .w-10.h-10 {
-            background: linear-gradient(135deg, #F1C9DB 0%, #E8B7CF 50%, #B8A0D6 100%) !important;
-            border: 1.5px solid #FFFFFF !important;
-            box-shadow: 0 4px 14px -2px rgba(50, 23, 79, 0.18) !important;
-            color: var(--text-dark-plum) !important;
-            border-radius: 9999px !important;
-        }
+    /* ✨ ÍCONOS Y EMOTICONES CON DEGRADADO PASTEL */
+    .glass-card-dark .w-12, 
+    .glass-card-dark .w-8, 
+    .glass-card-dark .w-10, 
+    .glass-card-dark .w-14,
+    .glass-card-dark .w-9,
+    .featured-card .w-12,
+    .icon-badge-pastel,
+    .w-12.h-12,
+    .w-14.h-14,
+    .w-10.h-10,
+    .w-24.h-24,
+    .w-28.h-28 {
+        background: linear-gradient(135deg, #F1C9DB 0%, #E8B7CF 50%, #B8A0D6 100%) !important;
+        border: 1.5px solid #FFFFFF !important;
+        box-shadow: 0 4px 14px -2px rgba(50, 23, 79, 0.18) !important;
+        color: #32174F !important;
+    }
 
-        svg, i {
-            color: var(--text-dark-plum) !important;
-            stroke: var(--text-dark-plum) !important;
-        }
+    svg, i, [data-lucide] {
+        color: #32174F !important;
+        stroke: #32174F !important;
+    }
 
-        /* 🔮 BOTONES DE ACCIÓN Y WHATSAPP */
-        a[href*="wa.me"], button, .btn-primary, a.bg-gradient-to-r {
-            background: linear-gradient(135deg, #43235F 0%, #32174F 100%) !important;
-            color: #F6DCE8 !important;
-            border: 1.5px solid #E8B7CF !important;
-            box-shadow: 0 10px 25px -5px rgba(50, 23, 79, 0.35) !important;
-            border-radius: 9999px !important;
-            font-weight: 700 !important;
-            transition: all 0.3s ease !important;
-        }
+    /* 🔮 BOTONES DE ACCIÓN Y WHATSAPP */
+    a[href*="wa.me"], button, .btn-primary, .btn-whatsapp-vibrant, a.bg-gradient-to-r {
+        background: linear-gradient(135deg, #43235F 0%, #32174F 100%) !important;
+        color: #F6DCE8 !important;
+        border: 1.5px solid #E8B7CF !important;
+        box-shadow: 0 10px 25px -5px rgba(50, 23, 79, 0.35) !important;
+        border-radius: 9999px !important;
+        font-weight: 700 !important;
+        transition: all 0.3s ease !important;
+    }
 
-        a[href*="wa.me"] *, button *, .btn-primary * {
-            color: #F6DCE8 !important;
-            stroke: #F6DCE8 !important;
-        }
+    a[href*="wa.me"] *, button *, .btn-primary *, .btn-whatsapp-vibrant * {
+        color: #F6DCE8 !important;
+        stroke: #F6DCE8 !important;
+    }
 
-        a[href*="wa.me"]:hover, button:hover, .btn-primary:hover, a.bg-gradient-to-r:hover {
-            background: linear-gradient(135deg, #32174F 0%, #180B2B 100%) !important;
-            transform: translateY(-2px) scale(1.02) !important;
-            box-shadow: 0 14px 30px -5px rgba(50, 23, 79, 0.45) !important;
-            border-color: #FFFFFF !important;
-        }
+    a[href*="wa.me"]:hover, button:hover, .btn-primary:hover, .btn-whatsapp-vibrant:hover, a.bg-gradient-to-r:hover {
+        background: linear-gradient(135deg, #32174F 0%, #180B2B 100%) !important;
+        transform: translateY(-2px) scale(1.02) !important;
+        box-shadow: 0 14px 30px -5px rgba(50, 23, 79, 0.45) !important;
+        border-color: #FFFFFF !important;
+    }
 
-        /* Badges and Tags */
-        span.bg-purple-900\/50, span.bg-purple-800\/50, span[class*="bg-purple"] {
-            background: linear-gradient(135deg, #E8B7CF 0%, #B8A0D6 100%) !important;
-            color: var(--text-dark-plum) !important;
-            border: 1px solid #FFFFFF !important;
-            font-weight: 600 !important;
-        }
+    /* Badges & Tags */
+    span[class*="bg-mystic"], span[class*="bg-purple"], .bg-mystic-800\/80, .bg-mystic-900\/90 {
+        background: linear-gradient(135deg, #E8B7CF 0%, #B8A0D6 100%) !important;
+        color: #32174F !important;
+        border: 1px solid #FFFFFF !important;
+        font-weight: 700 !important;
+    }
 
-        /* Accordion / Details */
-        details {
-            background: linear-gradient(145deg, rgba(246, 220, 232, 0.96) 0%, rgba(241, 201, 219, 0.93) 100%) !important;
-            border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
-            border-radius: 1rem !important;
-            margin-bottom: 1rem !important;
-        }
-
-        summary {
-            color: var(--text-dark-plum) !important;
-            font-weight: 700 !important;
-            cursor: pointer !important;
-        }
-    </style>
-
+    /* Hero Orb Styling */
+    .animate-orb .w-24, .animate-orb .w-28 {
+        background: linear-gradient(135deg, #F1C9DB 0%, #E8B7CF 50%, #B8A0D6 100%) !important;
+        box-shadow: 0 0 40px rgba(241, 201, 219, 0.8) !important;
+        border-radius: 9999px !important;
+    }
+</style>
 </head>
 <body class="font-sans antialiased selection:bg-mystic-500 selection:text-white relative min-h-screen w-full overflow-x-hidden">
 <canvas id="starCanvas"></canvas>
