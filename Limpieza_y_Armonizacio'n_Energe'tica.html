@@ -72,25 +72,27 @@
 
     
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style id="celeste-refined-lila-rosa-theme">
+    
+    <style id="celeste-definitive-perfect-theme">
     :root {
-        --lila-pastel-base: #B8A0D6;
+        --lila-pastel-bg: #B8A0D6;
         --lila-pastel-mid: #A98BCB;
-        --lila-pastel-deep: #9678BA;
-        --rosa-pastel-base: #F1C9DB;
-        --rosa-pastel-mid: #E8B7CF;
-        --rosa-pastel-soft: #F6DCE8;
-        --deep-purple: #180B2B;
-        --rich-plum: #2A1245;
-        --mystic-purple: #3B1A60;
+        --rosa-pastel-card: #F1C9DB;
+        --rosa-pastel-card-mid: #E8B7CF;
+        --text-plum-dark: #2A1245;
+        --text-plum-deep: #180B2B;
+        --whatsapp-green-start: #25D366;
+        --whatsapp-green-end: #128C7E;
     }
 
+    /* 1. UNIFORM CONTINUOUS LILA PASTEL BACKGROUND (NO CUTS / NO DIVISIONS) */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
-        background: linear-gradient(135deg, #A98BCB 0%, #B8A0D6 30%, #E8B7CF 65%, #9678BA 100%) !important;
+        background: #B8A0D6 !important;
+        background-image: linear-gradient(180deg, #B8A0D6 0%, #A98BCB 50%, #B8A0D6 100%) !important;
         background-attachment: fixed !important;
         color: #2A1245 !important;
         font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
@@ -98,33 +100,12 @@
         line-height: 1.7;
     }
 
-    /* Diffuse Lighting Glow Orbs */
-    .glow-orb-1 {
-        position: fixed;
-        top: -10%;
-        left: 45%;
-        transform: translateX(-50%);
-        width: 650px;
-        height: 650px;
-        background: radial-gradient(circle, rgba(246, 220, 232, 0.65) 0%, rgba(241, 201, 219, 0.25) 45%, transparent 70%);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 0;
+    /* Remove any split background blobs or horizontal cut overlays */
+    body::before, body::after, .glow-orb-1, .glow-orb-2, .aura-glow-vibrant {
+        display: none !important;
     }
 
-    .glow-orb-2 {
-        position: fixed;
-        bottom: -10%;
-        right: -10%;
-        width: 600px;
-        height: 600px;
-        background: radial-gradient(circle, rgba(232, 183, 207, 0.60) 0%, rgba(184, 160, 214, 0.20) 50%, transparent 70%);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 0;
-    }
-
-    /* ✨ Canvas Particles for Floating Light Sparkles */
+    /* 7. Subtle Star Canvas Particles */
     #starCanvas {
         position: fixed !important;
         top: 0 !important;
@@ -140,24 +121,23 @@
         z-index: 2;
     }
 
-    /* 🌸 TARJETAS Y CONTENEDORES - Base Rosa Pastel visible con iluminación y sombras suaves */
+    /* 2. ROSA PASTEL CARDS WITH HIGH CONTRAST */
     .glass-card-dark, .featured-card, div[class*="glass-card"], div[class*="bg-mystic"], div[class*="bg-purple"] {
-        background: linear-gradient(145deg, rgba(241, 201, 219, 0.96) 0%, rgba(232, 183, 207, 0.93) 50%, rgba(246, 220, 232, 0.90) 100%) !important;
-        border: 1.5px solid rgba(255, 255, 255, 0.90) !important;
-        box-shadow: 0 16px 38px -8px rgba(42, 18, 69, 0.22), 0 0 22px 0 rgba(241, 201, 219, 0.40) !important;
-        border-radius: 1.5rem !important;
+        background: linear-gradient(145deg, #F1C9DB 0%, #E8B7CF 60%, #F6DCE8 100%) !important;
+        border: 1.5px solid #FFFFFF !important;
+        box-shadow: 0 14px 32px -6px rgba(42, 18, 69, 0.20), 0 0 16px 0 rgba(241, 201, 219, 0.35) !important;
+        border-radius: 1.25rem !important;
         color: #2A1245 !important;
-        backdrop-filter: blur(12px) !important;
-        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     }
 
     .glass-card-dark:hover, .featured-card:hover {
-        transform: translateY(-5px) !important;
-        box-shadow: 0 24px 48px -10px rgba(42, 18, 69, 0.32), 0 0 28px 0 rgba(232, 183, 207, 0.55) !important;
+        transform: translateY(-4px) !important;
+        box-shadow: 0 20px 40px -8px rgba(42, 18, 69, 0.28), 0 0 22px 0 rgba(232, 183, 207, 0.50) !important;
         border-color: #FFFFFF !important;
     }
 
-    /* Text Colors for Crisp Legibility */
+    /* Text Colors for High Contrast */
     p, span, li, td, th, label, div {
         color: #2A1245 !important;
     }
@@ -166,32 +146,83 @@
         color: #2A1245 !important;
     }
 
-    /* 🪻 TIPOGRAFÍA REFINADA & ELEGANTE - Outfit & Playfair Display */
+    /* 4. TIPOGRAFÍA REFINADA & JERARQUÍA */
     h1, h2, h3, h4, .font-serif, .gradient-title, .gradient-subtitle {
         color: #180B2B !important;
-        font-family: 'Outfit', 'Playfair Display', serif !important;
+        font-family: 'Outfit', sans-serif !important;
         font-weight: 800 !important;
         letter-spacing: -0.015em !important;
-        text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6) !important;
         background: none !important;
         -webkit-text-fill-color: #180B2B !important;
     }
 
     h1 {
-        font-size: clamp(2.4rem, 5.8vw, 4rem) !important;
+        font-size: clamp(2.3rem, 5.5vw, 3.8rem) !important;
         line-height: 1.15 !important;
     }
 
     h2 {
-        font-size: clamp(1.9rem, 4.4vw, 2.9rem) !important;
+        font-size: clamp(1.85rem, 4.2vw, 2.85rem) !important;
         line-height: 1.2 !important;
     }
 
     h3 {
-        font-size: clamp(1.4rem, 3.3vw, 2rem) !important;
+        font-size: clamp(1.35rem, 3.2vw, 1.9rem) !important;
     }
 
-    /* ✨ ÍCONOS Y EMOTICONES CON DEGRADADO PASTEL */
+    /* 3. INSIGNIA "SERVICIO PRINCIPAL" DESTAQUADA */
+    .featured-card .absolute, .badge-servicio-principal {
+        background: linear-gradient(135deg, #180B2B 0%, #32174F 100%) !important;
+        color: #F6DCE8 !important;
+        border: 1.5px solid #E8B7CF !important;
+        box-shadow: 0 4px 14px rgba(42, 18, 69, 0.30) !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        padding: 0.4rem 1rem !important;
+        border-radius: 9999px !important;
+    }
+
+    /* 5. BOTONES DE WHATSAPP - VERDE DE WHATSAPP PROFESIONAL */
+    a[href*="wa.me"], .btn-whatsapp-vibrant {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+        color: #FFFFFF !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+        box-shadow: 0 10px 24px -4px rgba(37, 211, 102, 0.40) !important;
+        border-radius: 9999px !important;
+        font-weight: 700 !important;
+        transition: all 0.3s ease !important;
+    }
+
+    a[href*="wa.me"] *, .btn-whatsapp-vibrant * {
+        color: #FFFFFF !important;
+        stroke: #FFFFFF !important;
+    }
+
+    a[href*="wa.me"]:hover, .btn-whatsapp-vibrant:hover {
+        background: linear-gradient(135deg, #22BF5B 0%, #0E7065 100%) !important;
+        transform: translateY(-2px) scale(1.02) !important;
+        box-shadow: 0 14px 30px -4px rgba(37, 211, 102, 0.50) !important;
+        border-color: #FFFFFF !important;
+    }
+
+    /* Non-WhatsApp Secondary Buttons */
+    a[href="#valor"], a[href="#vinculos"] {
+        background: linear-gradient(135deg, #32174F 0%, #180B2B 100%) !important;
+        color: #F6DCE8 !important;
+        border: 1.5px solid #E8B7CF !important;
+        box-shadow: 0 8px 20px -4px rgba(42, 18, 69, 0.30) !important;
+        border-radius: 9999px !important;
+        font-weight: 700 !important;
+    }
+
+    a[href="#valor"] *, a[href="#vinculos"] * {
+        color: #F6DCE8 !important;
+        stroke: #F6DCE8 !important;
+    }
+
+    /* Icon Badges */
     .glass-card-dark .w-12, 
     .glass-card-dark .w-8, 
     .glass-card-dark .w-10, 
@@ -204,9 +235,9 @@
     .w-10.h-10,
     .w-24.h-24,
     .w-28.h-28 {
-        background: linear-gradient(135deg, #F1C9DB 0%, #E8B7CF 50%, #B8A0D6 100%) !important;
+        background: linear-gradient(135deg, #E8B7CF 0%, #B8A0D6 100%) !important;
         border: 1.5px solid #FFFFFF !important;
-        box-shadow: 0 4px 14px -2px rgba(42, 18, 69, 0.18) !important;
+        box-shadow: 0 4px 12px -2px rgba(42, 18, 69, 0.15) !important;
         color: #2A1245 !important;
     }
 
@@ -215,42 +246,15 @@
         stroke: #2A1245 !important;
     }
 
-    /* 🔮 BOTONES DE ACCIÓN Y WHATSAPP */
-    a[href*="wa.me"], button, .btn-primary, .btn-whatsapp-vibrant, a.bg-gradient-to-r {
-        background: linear-gradient(135deg, #2A1245 0%, #180B2B 100%) !important;
-        color: #F6DCE8 !important;
-        border: 1.5px solid #E8B7CF !important;
-        box-shadow: 0 10px 25px -5px rgba(42, 18, 69, 0.38) !important;
-        border-radius: 9999px !important;
-        font-weight: 700 !important;
-        transition: all 0.3s ease !important;
-    }
-
-    a[href*="wa.me"] *, button *, .btn-primary *, .btn-whatsapp-vibrant * {
-        color: #F6DCE8 !important;
-        stroke: #F6DCE8 !important;
-    }
-
-    a[href*="wa.me"]:hover, button:hover, .btn-primary:hover, .btn-whatsapp-vibrant:hover, a.bg-gradient-to-r:hover {
-        background: linear-gradient(135deg, #180B2B 0%, #3B1A60 100%) !important;
-        transform: translateY(-2px) scale(1.02) !important;
-        box-shadow: 0 14px 30px -5px rgba(42, 18, 69, 0.48) !important;
-        border-color: #FFFFFF !important;
-    }
-
-    /* Badges & Tags */
-    span[class*="bg-mystic"], span[class*="bg-purple"], .bg-mystic-800\/80, .bg-mystic-900\/90 {
-        background: linear-gradient(135deg, #E8B7CF 0%, #B8A0D6 100%) !important;
-        color: #2A1245 !important;
-        border: 1px solid #FFFFFF !important;
-        font-weight: 700 !important;
-    }
-
-    /* Hero Orb Styling */
-    .animate-orb .w-24, .animate-orb .w-28 {
-        background: linear-gradient(135deg, #F1C9DB 0%, #E8B7CF 50%, #B8A0D6 100%) !important;
-        box-shadow: 0 0 45px rgba(241, 201, 219, 0.85) !important;
-        border-radius: 9999px !important;
+    /* 6. CLEAN & ORDERED FOOTER STYLING */
+    footer, .footer-section {
+        background: linear-gradient(145deg, #F1C9DB 0%, #E8B7CF 100%) !important;
+        border-top: 1.5px solid #FFFFFF !important;
+        padding: 3rem 1.5rem !important;
+        margin-top: 4rem !important;
+        border-radius: 2rem 2rem 0 0 !important;
+        box-shadow: 0 -10px 30px rgba(42, 18, 69, 0.12) !important;
+        text-align: center !important;
     }
 </style>
 </head>
@@ -628,6 +632,7 @@
         });
     </script>
 
+
 <script id="star-particles-js">
 (function() {
     const canvas = document.getElementById('starCanvas');
@@ -642,19 +647,20 @@
     });
 
     const particles = [];
-    const colors = ['#FFFFFF', '#F6DCE8', '#F1C9DB', '#E8B7CF', '#B8A0D6', '#FFF5FA'];
+    const colors = ['#FFFFFF', '#F6DCE8', '#F1C9DB', '#FFF5FA'];
 
-    for (let i = 0; i < 60; i++) {
+    // 40 particles for subtle, non-intrusive sparkle effect
+    for (let i = 0; i < 40; i++) {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 2.2 + 0.8,
+            radius: Math.random() * 1.8 + 0.6,
             color: colors[Math.floor(Math.random() * colors.length)],
-            alpha: Math.random() * 0.75 + 0.25,
-            speedAlpha: Math.random() * 0.012 + 0.004,
-            speedY: Math.random() * 0.25 + 0.05,
-            speedX: (Math.random() - 0.5) * 0.15,
-            isStar: Math.random() > 0.55
+            alpha: Math.random() * 0.5 + 0.15,
+            speedAlpha: Math.random() * 0.008 + 0.002,
+            speedY: Math.random() * 0.15 + 0.03,
+            speedX: (Math.random() - 0.5) * 0.1,
+            isStar: Math.random() > 0.6
         });
     }
 
@@ -693,7 +699,7 @@
             p.x += p.speedX;
             p.alpha += p.speedAlpha;
 
-            if (p.alpha > 0.95 || p.alpha < 0.2) {
+            if (p.alpha > 0.75 || p.alpha < 0.15) {
                 p.speedAlpha = -p.speedAlpha;
             }
 
@@ -702,15 +708,13 @@
             if (p.x > width + 10) p.x = -10;
 
             if (p.isStar) {
-                drawStar(ctx, p.x, p.y, 4, p.radius * 2.5, p.radius * 0.7, p.color, p.alpha);
+                drawStar(ctx, p.x, p.y, 4, p.radius * 2.2, p.radius * 0.6, p.color, p.alpha);
             } else {
                 ctx.save();
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
                 ctx.fillStyle = p.color;
                 ctx.globalAlpha = p.alpha;
-                ctx.shadowBlur = 6;
-                ctx.shadowColor = p.color;
                 ctx.fill();
                 ctx.restore();
             }
@@ -720,6 +724,7 @@
     animate();
 })();
 </script>
+
 
 </body>
 </html>
