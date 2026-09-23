@@ -70,7 +70,9 @@
 
     
 
-    <style id="celeste-definitive-lila-rosa-theme">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style id="celeste-refined-lila-rosa-theme">
     :root {
         --lila-pastel-base: #B8A0D6;
         --lila-pastel-mid: #A98BCB;
@@ -78,8 +80,9 @@
         --rosa-pastel-base: #F1C9DB;
         --rosa-pastel-mid: #E8B7CF;
         --rosa-pastel-soft: #F6DCE8;
-        --text-plum-dark: #32174F;
-        --text-plum-mid: #43235F;
+        --deep-purple: #180B2B;
+        --rich-plum: #2A1245;
+        --mystic-purple: #3B1A60;
     }
 
     html, body {
@@ -87,40 +90,41 @@
         width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
-        background: linear-gradient(135deg, #B8A0D6 0%, #A98BCB 35%, #E8B7CF 70%, #9678BA 100%) !important;
+        background: linear-gradient(135deg, #A98BCB 0%, #B8A0D6 30%, #E8B7CF 65%, #9678BA 100%) !important;
         background-attachment: fixed !important;
-        color: #32174F !important;
-        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        color: #2A1245 !important;
+        font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
         font-size: 18px;
         line-height: 1.7;
     }
 
-    /* Luminous Background Ambient Blobs */
-    body::before {
-        content: '';
+    /* Diffuse Lighting Glow Orbs */
+    .glow-orb-1 {
         position: fixed;
-        top: -15%;
-        left: -15%;
-        width: 65vw;
-        height: 65vw;
-        background: radial-gradient(circle, rgba(246, 220, 232, 0.55) 0%, rgba(184, 160, 214, 0) 70%);
+        top: -10%;
+        left: 45%;
+        transform: translateX(-50%);
+        width: 650px;
+        height: 650px;
+        background: radial-gradient(circle, rgba(246, 220, 232, 0.65) 0%, rgba(241, 201, 219, 0.25) 45%, transparent 70%);
+        border-radius: 50%;
         pointer-events: none;
         z-index: 0;
     }
 
-    body::after {
-        content: '';
+    .glow-orb-2 {
         position: fixed;
-        bottom: -15%;
-        right: -15%;
-        width: 70vw;
-        height: 70vw;
-        background: radial-gradient(circle, rgba(232, 183, 207, 0.55) 0%, rgba(150, 120, 186, 0) 70%);
+        bottom: -10%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(232, 183, 207, 0.60) 0%, rgba(184, 160, 214, 0.20) 50%, transparent 70%);
+        border-radius: 50%;
         pointer-events: none;
         z-index: 0;
     }
 
-    /* ✨ Canvas Particles for Stars and Light Sparkles */
+    /* ✨ Canvas Particles for Floating Light Sparkles */
     #starCanvas {
         position: fixed !important;
         top: 0 !important;
@@ -136,55 +140,55 @@
         z-index: 2;
     }
 
-    /* 🌸 TARJETAS Y CONTENEDORES - Base Rosa Pastel + Lila Pastel (Depth & Shadow) */
+    /* 🌸 TARJETAS Y CONTENEDORES - Base Rosa Pastel visible con iluminación y sombras suaves */
     .glass-card-dark, .featured-card, div[class*="glass-card"], div[class*="bg-mystic"], div[class*="bg-purple"] {
-        background: linear-gradient(145deg, rgba(246, 220, 232, 0.96) 0%, rgba(241, 201, 219, 0.93) 50%, rgba(232, 183, 207, 0.90) 100%) !important;
-        border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
-        box-shadow: 0 15px 35px -8px rgba(50, 23, 79, 0.22), 0 0 20px 0 rgba(241, 201, 219, 0.35) !important;
+        background: linear-gradient(145deg, rgba(241, 201, 219, 0.96) 0%, rgba(232, 183, 207, 0.93) 50%, rgba(246, 220, 232, 0.90) 100%) !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.90) !important;
+        box-shadow: 0 16px 38px -8px rgba(42, 18, 69, 0.22), 0 0 22px 0 rgba(241, 201, 219, 0.40) !important;
         border-radius: 1.5rem !important;
-        color: #32174F !important;
+        color: #2A1245 !important;
         backdrop-filter: blur(12px) !important;
         transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
     }
 
     .glass-card-dark:hover, .featured-card:hover {
         transform: translateY(-5px) !important;
-        box-shadow: 0 22px 45px -10px rgba(50, 23, 79, 0.30), 0 0 25px 0 rgba(232, 183, 207, 0.50) !important;
+        box-shadow: 0 24px 48px -10px rgba(42, 18, 69, 0.32), 0 0 28px 0 rgba(232, 183, 207, 0.55) !important;
         border-color: #FFFFFF !important;
     }
 
-    /* Text Colors for 100% Crisp Legibility */
+    /* Text Colors for Crisp Legibility */
     p, span, li, td, th, label, div {
-        color: #32174F !important;
+        color: #2A1245 !important;
     }
 
     .text-mystic-100, .text-mystic-200, .text-mystic-300, .text-purple-200, .text-purple-300, .text-slate-300, .text-slate-400, .text-white {
-        color: #32174F !important;
+        color: #2A1245 !important;
     }
 
-    /* 🪻 HEADINGS - Serif Modern Refined (Cormorant Garamond / Cinzel) */
+    /* 🪻 TIPOGRAFÍA REFINADA & ELEGANTE - Outfit & Playfair Display */
     h1, h2, h3, h4, .font-serif, .gradient-title, .gradient-subtitle {
-        color: #32174F !important;
-        font-family: 'Cormorant Garamond', 'Cinzel', serif !important;
-        font-weight: 700 !important;
-        letter-spacing: -0.01em !important;
-        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6) !important;
+        color: #180B2B !important;
+        font-family: 'Outfit', 'Playfair Display', serif !important;
+        font-weight: 800 !important;
+        letter-spacing: -0.015em !important;
+        text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7) !important;
         background: none !important;
-        -webkit-text-fill-color: #32174F !important;
+        -webkit-text-fill-color: #180B2B !important;
     }
 
     h1 {
-        font-size: clamp(2.3rem, 5.5vw, 3.8rem) !important;
+        font-size: clamp(2.4rem, 5.8vw, 4rem) !important;
         line-height: 1.15 !important;
     }
 
     h2 {
-        font-size: clamp(1.85rem, 4.2vw, 2.85rem) !important;
+        font-size: clamp(1.9rem, 4.4vw, 2.9rem) !important;
         line-height: 1.2 !important;
     }
 
     h3 {
-        font-size: clamp(1.35rem, 3.2vw, 1.95rem) !important;
+        font-size: clamp(1.4rem, 3.3vw, 2rem) !important;
     }
 
     /* ✨ ÍCONOS Y EMOTICONES CON DEGRADADO PASTEL */
@@ -202,21 +206,21 @@
     .w-28.h-28 {
         background: linear-gradient(135deg, #F1C9DB 0%, #E8B7CF 50%, #B8A0D6 100%) !important;
         border: 1.5px solid #FFFFFF !important;
-        box-shadow: 0 4px 14px -2px rgba(50, 23, 79, 0.18) !important;
-        color: #32174F !important;
+        box-shadow: 0 4px 14px -2px rgba(42, 18, 69, 0.18) !important;
+        color: #2A1245 !important;
     }
 
     svg, i, [data-lucide] {
-        color: #32174F !important;
-        stroke: #32174F !important;
+        color: #2A1245 !important;
+        stroke: #2A1245 !important;
     }
 
     /* 🔮 BOTONES DE ACCIÓN Y WHATSAPP */
     a[href*="wa.me"], button, .btn-primary, .btn-whatsapp-vibrant, a.bg-gradient-to-r {
-        background: linear-gradient(135deg, #43235F 0%, #32174F 100%) !important;
+        background: linear-gradient(135deg, #2A1245 0%, #180B2B 100%) !important;
         color: #F6DCE8 !important;
         border: 1.5px solid #E8B7CF !important;
-        box-shadow: 0 10px 25px -5px rgba(50, 23, 79, 0.35) !important;
+        box-shadow: 0 10px 25px -5px rgba(42, 18, 69, 0.38) !important;
         border-radius: 9999px !important;
         font-weight: 700 !important;
         transition: all 0.3s ease !important;
@@ -228,16 +232,16 @@
     }
 
     a[href*="wa.me"]:hover, button:hover, .btn-primary:hover, .btn-whatsapp-vibrant:hover, a.bg-gradient-to-r:hover {
-        background: linear-gradient(135deg, #32174F 0%, #180B2B 100%) !important;
+        background: linear-gradient(135deg, #180B2B 0%, #3B1A60 100%) !important;
         transform: translateY(-2px) scale(1.02) !important;
-        box-shadow: 0 14px 30px -5px rgba(50, 23, 79, 0.45) !important;
+        box-shadow: 0 14px 30px -5px rgba(42, 18, 69, 0.48) !important;
         border-color: #FFFFFF !important;
     }
 
     /* Badges & Tags */
     span[class*="bg-mystic"], span[class*="bg-purple"], .bg-mystic-800\/80, .bg-mystic-900\/90 {
         background: linear-gradient(135deg, #E8B7CF 0%, #B8A0D6 100%) !important;
-        color: #32174F !important;
+        color: #2A1245 !important;
         border: 1px solid #FFFFFF !important;
         font-weight: 700 !important;
     }
@@ -245,7 +249,7 @@
     /* Hero Orb Styling */
     .animate-orb .w-24, .animate-orb .w-28 {
         background: linear-gradient(135deg, #F1C9DB 0%, #E8B7CF 50%, #B8A0D6 100%) !important;
-        box-shadow: 0 0 40px rgba(241, 201, 219, 0.8) !important;
+        box-shadow: 0 0 45px rgba(241, 201, 219, 0.85) !important;
         border-radius: 9999px !important;
     }
 </style>
