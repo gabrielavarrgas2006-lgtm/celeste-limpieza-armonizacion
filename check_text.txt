@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Primary Meta Tags -->
+    <title>Celeste Universo Consciente · Limpieza y Armonización Energética</title>
+    <meta name="title" content="Celeste Universo Consciente · Limpieza y Armonización Energética">
+    <meta name="description" content="Trabajamos energéticamente sobre la vibración de tus relaciones, persona y espacios para disolver cargas sutiles, recuperar la paz y favorecer un nuevo equilibrio.">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Celeste Universo Consciente · Limpieza y Armonización Energética">
+    <meta property="og:description" content="Trabajamos energéticamente sobre la vibración de tus relaciones, persona y espacios para disolver cargas sutiles y recuperar la paz.">
+
+    <!-- Speed & Performance Preconnect / DNS-Prefetch -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+
+    <!-- Google Fonts with display=swap and Non-blocking Async Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+
+    <!-- Scripts & Styles CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosaPastelClaro: '#FAF0F5',
+                        rosaSuave: '#F4E3EC',
+                        lavandaSuave: '#CFC2E5',
+                        lilaPastel: '#BFAED6',
+                        deepPurple: '#180B2B',
+                        richPlum: '#2A1245',
+                        mysticPurple: '#3B1A60',
+                        mystic: {
+                            950: '#FAF0F5',
+                            900: '#F4E3EC',
+                            800: '#CFC2E5',
+                            700: '#BFAED6',
+                            600: '#3B1A60',
+                            500: '#2A1245',
+                            400: '#180B2B',
+                            300: '#3B1A60',
+                            200: '#2A1245',
+                            100: '#180B2B'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --rosa-pastel-claro: #FAF0F5;
+            --rosa-suave: #F4E3EC;
+            --lavanda-suave: #CFC2E5;
+            --lila-pastel: #BFAED6;
+            --deep-purple: #180B2B;
+            --rich-plum: #2A1245;
+            --mystic-purple: #3B1A60;
+        }
+
+        *, ::before, ::after {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #F7EBEF 0%, #F4E3EC 30%, #CFC2E5 70%, #BFAED6 100%);
+            background-attachment: fixed;
+            color: #2A1245;
+            font-size: 18px;
+            line-height: 1.7;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 500;
+        }
+
+        /* 🌸 TARJETAS Y CONTENEDORES - Frosted Glass Pastel (Sin backdrop-filter blur para máximo rendimiento) */
+        .glass-card-dark, .featured-card {
+            background: linear-gradient(135deg, rgba(250, 240, 245, 0.94) 0%, rgba(244, 227, 236, 0.88) 50%, rgba(207, 194, 229, 0.58) 100%) !important;
+            border: 1.5px solid #FFF5FA !important;
+            box-shadow: 0 10px 25px -8px rgba(59, 26, 96, 0.08) !important;
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+        }
+
+        .glass-card-dark:hover, .featured-card:hover {
+            transform: translateY(-3px) !important;
+            border-color: #FAF0F5 !important;
+            box-shadow: 0 15px 30px -8px rgba(59, 26, 96, 0.15) !important;
+        }
+
+        /* ✨ ÍCONOS Y EMOTICONES CON DEGRADADO PASTEL Y BORDE BLANCO */
+        .glass-card-dark .w-12, 
+        .glass-card-dark .w-8, 
+        .glass-card-dark .w-10, 
+        .glass-card-dark .w-14,
+        .glass-card-dark .w-9,
+        .featured-card .w-12,
+        .icon-badge-pastel {
+            background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 50%, #CFC2E5 100%) !important;
+            border: 1.5px solid #FFFFFF !important;
+            box-shadow: 0 4px 12px -2px rgba(59, 26, 96, 0.12) !important;
+            color: #3B1A60 !important;
+        }
+
+        .glass-card-dark svg, 
+        .glass-card-dark i,
+        .featured-card svg,
+        .featured-card i,
+        .icon-badge-pastel svg,
+        .icon-badge-pastel i {
+            color: #3B1A60 !important;
+            stroke: #3B1A60 !important;
+        }
+
+        /* 🪻 TIPOGRAFÍA Y DEGRADADOS DE COLOR DE TEXTO */
+        h1, h2 {
+            color: #180B2B !important;
+            font-family: 'Cinzel', serif !important;
+            font-weight: 700 !important;
+        }
+
+        h3, h4, h5, h6 {
+            color: #180B2B !important;
+        }
+
+        p, li, label, div {
+            color: #2A1245;
+        }
+
+        .text-white {
+            color: #180B2B !important;
+        }
+
+        .text-mystic-100, 
+        .text-mystic-200, 
+        .text-mystic-100\/80, 
+        .text-mystic-100\/90, 
+        .text-mystic-200\/80, 
+        .text-mystic-200\/90 {
+            color: #2A1245 !important;
+        }
+
+        .text-mystic-300, 
+        .text-mystic-400, 
+        .text-mystic-500 {
+            color: #3B1A60 !important;
+            font-weight: 600 !important;
+        }
+
+        /* Subtítulos, Badges y Pill Tags */
+        .bg-mystic-800\/80, 
+        .bg-mystic-900\/90, 
+        .bg-mystic-900\/80, 
+        .bg-mystic-950\/80, 
+        .bg-mystic-900\/70,
+        .bg-mystic-950 {
+            background: linear-gradient(135deg, rgba(250, 240, 245, 0.95) 0%, rgba(244, 227, 236, 0.90) 100%) !important;
+            border: 1.5px solid #FFF5FA !important;
+            color: #3B1A60 !important;
+            box-shadow: 0 4px 15px rgba(59, 26, 96, 0.06) !important;
+        }
+
+        .gradient-title {
+            background: linear-gradient(135deg, #180B2B 0%, #2A1245 60%, #3B1A60 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        .gradient-subtitle {
+            background: linear-gradient(135deg, #180B2B 0%, #3B1A60 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(207, 194, 229, 0.6) !important;
+        }
+
+        .aura-glow-vibrant {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.6;
+            background: radial-gradient(circle, rgba(250, 240, 245, 0.7) 0%, rgba(244, 227, 236, 0.3) 50%, transparent 70%) !important;
+        }
+
+        .btn-purple-vibrant {
+            background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 50%, #CFC2E5 100%) !important;
+            color: #3B1A60 !important;
+            border: 1.5px solid #FFFFFF !important;
+            box-shadow: 0 6px 18px rgba(59, 26, 96, 0.12) !important;
+            transition: all 0.25s ease !important;
+            font-weight: 700 !important;
+        }
+
+        .btn-purple-vibrant:hover {
+            background: linear-gradient(135deg, #F4E3EC 0%, #CFC2E5 50%, #BFAED6 100%) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 10px 25px rgba(59, 26, 96, 0.18) !important;
+        }
+
+        .btn-whatsapp-vibrant {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important;
+            color: #ffffff !important;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35) !important;
+            transition: all 0.3s ease !important;
+        }
+
+        .btn-whatsapp-vibrant:hover {
+            background: linear-gradient(135deg, #2bf075 0%, #15a090 100%) !important;
+            box-shadow: 0 12px 35px rgba(37, 211, 102, 0.5) !important;
+            transform: translateY(-2px) !important;
+        }
+
+        /* Hero Orb Styling for Soft Pastel Theme */
+        .animate-orb .w-24, .animate-orb .w-28 {
+            background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 40%, #CFC2E5 100%) !important;
+            box-shadow: 0 0 35px rgba(207, 194, 229, 0.7) !important;
+        }
+
+        .animate-orb .bg-mystic-950 {
+            background: #FAF0F5 !important;
+            border-color: #CFC2E5 !important;
+        }
+
+        @keyframes orbGlow {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.08); opacity: 0.95; }
+        }
+
+        .animate-orb {
+            animation: orbGlow 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-mystic-500 selection:text-white relative min-h-screen w-full overflow-x-hidden">
+
+    <!-- Background Aura Glows -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0 w-full h-full">
+        <div class="aura-glow-vibrant w-[600px] h-[600px] bg-mystic-600/40 -top-30 -left-30"></div>
+        <div class="aura-glow-vibrant w-[700px] h-[700px] bg-mystic-500/30 top-[30%] -right-40"></div>
+        <div class="aura-glow-vibrant w-[650px] h-[650px] bg-mystic-700/40 bottom-10 left-10"></div>
+    </div>
+
+    <!-- Main Outer Container -->
+    <div class="relative z-10 w-full max-w-full overflow-x-hidden">
+
+        <!-- Header / Navigation -->
+        <header class="w-full pt-6 px-4 sm:px-6">
+            <div class="max-w-4xl mx-auto flex items-center justify-between py-3.5 px-4 sm:px-6 rounded-full glass-card-dark">
+                <div class="flex items-center gap-2.5 sm:gap-3 shrink min-w-0">
+                    <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-mystic-700/60 border border-mystic-400/50 flex items-center justify-center text-mystic-200 shadow-inner shrink-0">
+                        <i data-lucide="sparkles" class="w-4 h-4 sm:w-5 sm:h-5"></i>
+                    </div>
+                    <span class="font-serif tracking-wider text-xs sm:text-sm text-white uppercase font-bold truncate">Celeste Universo Consciente</span>
+                </div>
+                <a href="#valor" class="text-[11px] sm:text-xs uppercase tracking-wider font-semibold text-mystic-200 hover:text-white transition-colors bg-mystic-800/80 px-3 sm:px-4 py-2 rounded-full border border-mystic-500/40 hover:border-mystic-300 shrink-0">
+                    Sesiones
+                </a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 relative w-full">
+            <div class="max-w-3xl mx-auto text-center w-full">
+                
+                <!-- Orbe Místico Energético -->
+                <div class="mb-6 sm:mb-8 inline-block animate-orb">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-mystic-700 via-mystic-500 to-mystic-300 p-1 shadow-[0_0_50px_rgba(163,75,240,0.6)]">
+                        <div class="w-full h-full rounded-full bg-mystic-950 flex items-center justify-center border border-mystic-300/30">
+                            <i data-lucide="sparkle" class="w-12 h-12 text-mystic-200 text-glow"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inline-block mb-3 max-w-full">
+                    <span class="text-mystic-200 text-xs sm:text-sm uppercase tracking-widest font-bold bg-mystic-800/80 px-3.5 sm:px-4 py-1.5 rounded-full border border-mystic-500/50 inline-block max-w-full truncate">Celeste Universo Consciente</span>
+                </div>
+
+                <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-bold gradient-title tracking-tight leading-tight mb-6 text-glow px-2">
+                    Limpieza y armonización <br class="hidden sm:block"/> energética
+                </h1>
+
+                <p class="text-base sm:text-xl text-mystic-100/90 font-light max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10 px-2">
+                    Trabajamos energéticamente sobre la vibración de tus relaciones, espacio y persona para disolver cargas sutiles, recuperar la paz y favorecer un nuevo equilibrio.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md sm:max-w-none mx-auto">
+                    <a href="#vinculos" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full glass-card-dark text-white text-sm font-semibold tracking-wide uppercase transition-all group">
+                        <span>Conoce el abordaje</span>
+                        <i data-lucide="chevron-down" class="w-4 h-4 text-mystic-300 group-hover:translate-y-1 transition-transform"></i>
+                    </a>
+                    
+                    <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20estoy%20interesada%20en%20la%20Limpieza%20y%20Armonizaci%C3%B3n%20Energ%C3%A9tica." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full btn-whatsapp-vibrant text-sm font-bold tracking-wide uppercase">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Consultar por WhatsApp</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección 1: ¿Sobre qué podemos trabajar? -->
+        <section id="vinculos" class="py-12 sm:py-16 px-4 sm:px-6 w-full">
+            <div class="max-w-5xl mx-auto w-full">
+                
+                <div class="text-center mb-10 sm:mb-12">
+                    <span class="text-mystic-200 text-xs uppercase tracking-widest font-bold bg-mystic-800/80 px-4 py-1.5 rounded-full border border-mystic-500/50">Energía de las relaciones</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl gradient-subtitle mt-4 font-bold">¿Sobre qué podemos trabajar?</h2>
+                    <p class="text-mystic-200/80 text-base max-w-xl mx-auto mt-3 font-light px-2">
+                        Abordamos la energía sutil asociada al vínculo, independientemente del tipo de relación.
+                    </p>
+                </div>
+
+                <!-- Tarjetas de Aspectos -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full">
+                    
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-mystic-600 to-mystic-800 border border-mystic-400/40 flex items-center justify-center mb-5 text-mystic-100 shadow-md">
+                            <i data-lucide="history" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Memorias</h3>
+                        <p class="text-base text-mystic-100/80 font-light leading-relaxed">
+                            Memorias de situaciones vividas que han dejado huellas pesadas o condicionamientos en la relación.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-mystic-600 to-mystic-800 border border-mystic-400/40 flex items-center justify-center mb-5 text-mystic-100 shadow-md">
+                            <i data-lucide="flame" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Enojos y peleas</h3>
+                        <p class="text-base text-mystic-100/80 font-light leading-relaxed">
+                            Disolución de la fricción acumulada y la reactividad repetitiva en el trato cotidiano.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-mystic-600 to-mystic-800 border border-mystic-400/40 flex items-center justify-center mb-5 text-mystic-100 shadow-md">
+                            <i data-lucide="waves" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Discordia</h3>
+                        <p class="text-base text-mystic-100/80 font-light leading-relaxed">
+                            Armonización de ambientes tensos para restablecer un espacio de paz y respeto mutuo.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-mystic-600 to-mystic-800 border border-mystic-400/40 flex items-center justify-center mb-5 text-mystic-100 shadow-md">
+                            <i data-lucide="message-square-x" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Falta de comunicación</h3>
+                        <p class="text-base text-mystic-100/80 font-light leading-relaxed">
+                            Desbloqueo de interferencias sutiles que impiden el entendimiento y la empatía.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-mystic-600 to-mystic-800 border border-mystic-400/40 flex items-center justify-center mb-5 text-mystic-100 shadow-md">
+                            <i data-lucide="feather" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Cargas emocionales</h3>
+                        <p class="text-base text-mystic-100/80 font-light leading-relaxed">
+                            Liberación del peso o desgaste sutil acumulado sin explicación aparente.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-mystic-600 to-mystic-800 border border-mystic-400/40 flex items-center justify-center mb-5 text-mystic-100 shadow-md">
+                            <i data-lucide="rotate-ccw" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-serif text-xl font-bold text-white mb-2">Patrones repetitivos</h3>
+                        <p class="text-base text-mystic-100/80 font-light leading-relaxed">
+                            Limpieza de dinámicas automáticas dentro de la relación para permitir nuevas formas de vincularse.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Recuadro Ético Respetuoso -->
+                <div class="mt-8 sm:mt-10 p-6 sm:p-8 rounded-3xl glass-card-dark border-mystic-400/40 flex flex-col sm:flex-row items-center gap-5 bg-gradient-to-r from-mystic-900/90 via-mystic-800/70 to-mystic-900/90 w-full">
+                    <div class="w-12 h-12 rounded-full bg-mystic-600/50 border border-mystic-300/40 flex items-center justify-center shrink-0 text-mystic-200">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <div class="text-center sm:text-left w-full">
+                        <h4 class="font-serif text-lg font-bold text-white mb-1">Objetivo del Abordaje</h4>
+                        <p class="text-base text-mystic-100/90 font-light">
+                            El objetivo es limpiar y armonizar la energía asociada al vínculo, favoreciendo mayor claridad y equilibrio. <strong class="text-white font-semibold underline decoration-mystic-400 underline-offset-4">No se busca controlar, manipular ni interferir en la voluntad de otra persona.</strong>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección 2: ¿Sobre qué más podemos trabajar? -->
+        <section class="py-12 sm:py-16 px-4 sm:px-6 w-full">
+            <div class="max-w-5xl mx-auto w-full">
+                
+                <div class="text-center mb-10 sm:mb-12">
+                    <span class="text-mystic-200 text-xs uppercase tracking-widest font-bold bg-mystic-800/80 px-4 py-1.5 rounded-full border border-mystic-500/50">Amplitud de Trabajo</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl gradient-subtitle mt-4 font-bold">¿Sobre qué podemos trabajar?</h2>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 w-full">
+                    
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="font-serif text-xl font-bold text-white">Personas</span>
+                            <i data-lucide="user" class="w-5 h-5 text-mystic-300"></i>
+                        </div>
+                        <p class="text-base text-mystic-100/80 font-light">
+                            Limpieza y reprogramación energética individual.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="font-serif text-xl font-bold text-white">Vínculos</span>
+                            <i data-lucide="users" class="w-5 h-5 text-mystic-300"></i>
+                        </div>
+                        <p class="text-base text-mystic-100/80 font-light">
+                            Limpieza y armonización energética de relaciones.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="font-serif text-xl font-bold text-white">Hogar y espacios</span>
+                            <i data-lucide="home" class="w-5 h-5 text-mystic-300"></i>
+                        </div>
+                        <p class="text-base text-mystic-100/80 font-light">
+                            Limpieza y armonización del ambiente.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="font-serif text-xl font-bold text-white">Negocios</span>
+                            <i data-lucide="briefcase" class="w-5 h-5 text-mystic-300"></i>
+                        </div>
+                        <p class="text-base text-mystic-100/80 font-light">
+                            Limpieza y armonización energética del espacio.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="font-serif text-xl font-bold text-white">Mascotas</span>
+                            <i data-lucide="heart" class="w-5 h-5 text-mystic-300"></i>
+                        </div>
+                        <p class="text-base text-mystic-100/80 font-light">
+                            Armonización energética adaptada al campo de la mascota.
+                        </p>
+                    </div>
+
+                    <div class="glass-card-dark p-6 sm:p-7 rounded-3xl w-full">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="font-serif text-xl font-bold text-white">Otros abordajes</span>
+                            <i data-lucide="help-circle" class="w-5 h-5 text-mystic-300"></i>
+                        </div>
+                        <p class="text-base text-mystic-100/80 font-light">
+                            Consultar según el espacio o situación particular.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Sección 3: VALOR & AGENDAMIENTO DIRECTO A WHATSAPP -->
+        <section id="valor" class="py-12 sm:py-16 px-4 sm:px-6 w-full">
+            <div class="max-w-4xl mx-auto w-full">
+                
+                <div class="text-center mb-10 sm:mb-12">
+                    <span class="text-mystic-200 text-xs uppercase tracking-widest font-bold bg-mystic-800/80 px-4 py-1.5 rounded-full border border-mystic-500/50">Inversión y Propuestas</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl gradient-title mt-4 font-bold text-glow">Valor del Servicio</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 sm:gap-8 items-stretch mb-10 w-full">
+                    
+                    <!-- Tarjeta Sesión Individual (Optimizado 100% para Móviles) -->
+                    <div class="featured-card p-5 sm:p-8 pt-10 sm:pt-8 rounded-3xl flex flex-col justify-between relative transition-all duration-300 hover:scale-[1.01] overflow-hidden w-full">
+                        
+                        <!-- Insignia Destacada -->
+                        <div class="absolute top-0 right-0 bg-gradient-to-l from-mystic-400 to-mystic-600 text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-1.5 rounded-bl-2xl shadow-md z-10">
+                            Servicio Principal
+                        </div>
+
+                        <div class="w-full">
+                            <div class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-mystic-200 bg-mystic-900/90 px-3 sm:px-3.5 py-1.5 rounded-full border border-mystic-400/40 mb-4 sm:mb-5 max-w-full">
+                                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-mystic-300 shrink-0"></i>
+                                <span class="truncate">Atención Individual</span>
+                            </div>
+
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">Sesión Individual</h3>
+                            <p class="text-sm sm:text-base text-mystic-100/90 font-light leading-relaxed mb-6">
+                                Limpieza profunda, reprogramación energética y armonización de campo personal adaptada a tu estado actual.
+                            </p>
+
+                            <!-- Lista de Beneficios Profesionales -->
+                            <ul class="space-y-3 mb-6 sm:mb-8 text-xs sm:text-sm text-mystic-100/90 font-light">
+                                <li class="flex items-start gap-2.5 sm:gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-mystic-500/30 border border-mystic-300/50 flex items-center justify-center shrink-0 text-mystic-200 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                    </div>
+                                    <span class="leading-snug">Limpieza y reprogramación energética individual</span>
+                                </li>
+                                <li class="flex items-start gap-2.5 sm:gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-mystic-500/30 border border-mystic-300/50 flex items-center justify-center shrink-0 text-mystic-200 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                    </div>
+                                    <span class="leading-snug">Liberación de cargas emocionales y densidades</span>
+                                </li>
+                                <li class="flex items-start gap-2.5 sm:gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-mystic-500/30 border border-mystic-300/50 flex items-center justify-center shrink-0 text-mystic-200 mt-0.5">
+                                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                                    </div>
+                                    <span class="leading-snug">Abordaje 100% personalizado según necesidades</span>
+                                </li>
+                            </ul>
+
+                            <!-- Precio Destacado -->
+                            <div class="p-4 sm:p-5 rounded-2xl bg-mystic-950/80 border border-mystic-500/40 shadow-inner mb-6 w-full">
+                                <span class="text-[10px] sm:text-[11px] uppercase tracking-widest text-mystic-300 block mb-1 font-semibold">Inversión por sesión</span>
+                                <div class="font-serif text-2xl sm:text-4xl font-bold text-white tracking-tight flex flex-wrap items-baseline gap-1.5">
+                                    <span>$50.000</span> <span class="text-xs sm:text-base font-sans font-normal text-mystic-200">ARS</span>
+                                </div>
+                                <div class="text-xs sm:text-base text-mystic-200 font-medium mt-1">
+                                    o <span class="text-white font-bold">USD 65</span> <span class="text-[11px] sm:text-xs text-mystic-300 font-light block sm:inline">(para el exterior)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón Recto, Alineado y Centrado -->
+                        <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20estoy%20interesada%20en%20agendar%20la%20Sesi%C3%B3n%20Individual%20(%2450.000%20ARS%20%2F%20USD%2065)." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl btn-whatsapp-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center shadow-lg hover:shadow-emerald-500/30">
+                            <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0"></i>
+                            <span class="truncate">Agendar Sesión Individual</span>
+                        </a>
+                    </div>
+
+                    <!-- Tarjeta Vínculos, Hogar, Mascotas -->
+                    <div class="glass-card-dark p-5 sm:p-8 rounded-3xl flex flex-col justify-between w-full">
+                        <div class="w-full">
+                            <div class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-mystic-200 bg-mystic-900/80 px-3 sm:px-3.5 py-1.5 rounded-full border border-mystic-600/50 mb-4 sm:mb-5 max-w-full">
+                                <i data-lucide="layers" class="w-3.5 h-3.5 text-mystic-400 shrink-0"></i>
+                                <span class="truncate">Abordaje Específico</span>
+                            </div>
+
+                            <h3 class="font-serif text-2xl font-bold text-white mb-2">Vínculos, Espacios y Más</h3>
+                            <p class="text-sm sm:text-base text-mystic-100/80 mb-6 font-light">Para relaciones, hogar, negocio, mascotas y otros espacios.</p>
+
+                            <div class="p-4 sm:p-5 rounded-2xl bg-mystic-900/70 border border-mystic-600/50 my-6 w-full">
+                                <span class="font-serif text-lg sm:text-xl text-white font-semibold block mb-1">Consultar valor personalizado</span>
+                                <p class="text-xs sm:text-sm text-mystic-200/80 font-light">Definimos la propuesta adecuada según el tipo de espacio o vínculo a trabajar.</p>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20me%20gustar%C3%ADa%20consultar%20por%20V%C3%ADnculos%2C%20Hogar%2C%20Negocio%20o%20Mascotas." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl btn-purple-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center">
+                            <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0"></i>
+                            <span class="truncate">Consultar por mi caso</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Call to Action WhatsApp Final Directo -->
+                <div class="p-6 sm:p-10 rounded-3xl glass-card-dark text-center bg-gradient-to-b from-mystic-800/90 to-mystic-950 border-mystic-400/50 shadow-2xl w-full">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/20 border border-emerald-400/40 mx-auto flex items-center justify-center mb-4 text-emerald-400">
+                        <i data-lucide="message-circle" class="w-7 h-7 sm:w-8 sm:h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-xl sm:text-3xl text-white font-bold mb-3">¿Tienes dudas o te gustaría coordinar?</h3>
+                    <p class="text-sm sm:text-base text-mystic-100/90 font-light max-w-lg mx-auto mb-6 sm:mb-8">
+                        Escríbeme un mensaje directo a WhatsApp al <strong class="text-white font-semibold whitespace-nowrap">+54 9 11 5458-1020</strong> para iniciar tu proceso de armonización.
+                    </p>
+                    <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20estoy%20interesada%20en%20la%20Limpieza%20y%20Armonizaci%C3%B3n%20Energ%C3%A9tica." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-7 sm:px-9 py-3.5 sm:py-4 rounded-full btn-whatsapp-vibrant text-sm sm:text-base font-bold tracking-wide w-full sm:w-auto">
+                        <i data-lucide="message-circle" class="w-5 h-5 sm:w-6 sm:h-6"></i>
+                        <span>Ir Directo a WhatsApp</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 sm:py-10 px-4 sm:px-6 border-t border-mystic-800/80 text-center text-xs sm:text-sm text-mystic-300/70 font-light w-full">
+            <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 w-full">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-mystic-400"></i>
+                    <span class="font-serif text-xs sm:text-sm font-semibold text-white">Celeste Universo Consciente</span>
+                </div>
+                <p>© 2026 Celeste Universo Consciente. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Inicialización Diferida e Inmediata de Iconos Lucide
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+</html>
+
