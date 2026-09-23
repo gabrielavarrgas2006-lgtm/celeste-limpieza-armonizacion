@@ -76,27 +76,25 @@
     
     
     
-    <style id="celeste-audio-feedback-theme">
+    <style id="celeste-redesign-theme">
     :root {
         --rosa-pastel-claro: #FAF0F5;
         --rosa-suave: #F4E3EC;
         --lavanda-suave: #CFC2E5;
-        --lila-pastel-rich: #8A67B0;
-        --lila-pastel-deep: #7E5CA4;
-        --lila-dark-accent: #74529B;
+        --lila-pastel: #BFAED6;
         --deep-purple: #180B2B;
         --rich-plum: #2A1245;
         --mystic-purple: #3B1A60;
     }
 
-    /* 1. CONTINUOUS RICH LILA PASTEL BACKGROUND (3 TONES DEEPER & UNIFORM) */
+    /* 1. SINGLE UNIFIED CONTINUOUS LILA PASTEL GRADIENT BACKGROUND (RAISED 2-3 TONES IN PASTEL LILA PRESENCE) */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
         max-width: 100vw !important;
         margin: 0 !important;
         padding: 0 !important;
-        background: linear-gradient(135deg, #8A67B0 0%, #7E5CA4 35%, #A384C6 70%, #74529B 100%) !important;
+        background: linear-gradient(135deg, #EAD5EA 0%, #DBC2ED 35%, #C2A1E6 70%, #AB89D8 100%) !important;
         background-attachment: fixed !important;
         color: #2A1245 !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
@@ -125,12 +123,12 @@
         z-index: 2;
     }
 
-    /* 3. FROSTED GLASS PASTEL PINK CARDS (CONTRAST AGAINST DEEP LILA) */
+    /* 3. PASTEL PINK FROSTED GLASS CARDS */
     .glass-card-dark, .featured-card, div[class*="glass-card"] {
-        background: linear-gradient(145deg, rgba(250, 240, 245, 0.96) 0%, rgba(244, 227, 236, 0.92) 50%, rgba(207, 194, 229, 0.85) 100%) !important;
-        border: 1.5px solid #FFFFFF !important;
-        box-shadow: 0 14px 32px -6px rgba(24, 11, 43, 0.20) !important;
-        border-radius: 1.25rem !important;
+        background: linear-gradient(145deg, #FAF0F5 0%, #F4E3EC 60%, #E8D5EB 100%) !important;
+        border: 1.5px solid #FFF5FA !important;
+        box-shadow: 0 10px 28px -4px rgba(59, 26, 96, 0.10) !important;
+        border-radius: 1.5rem !important;
         color: #2A1245 !important;
         transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
     }
@@ -138,10 +136,10 @@
     .glass-card-dark:hover, .featured-card:hover {
         transform: translateY(-4px) !important;
         border-color: #FFFFFF !important;
-        box-shadow: 0 20px 40px -6px rgba(24, 11, 43, 0.28) !important;
+        box-shadow: 0 16px 36px -4px rgba(59, 26, 96, 0.16) !important;
     }
 
-    /* 4. ICON BADGES */
+    /* 4. ICON BADGES & LUCIDE SVG ICONS */
     .glass-card-dark .w-12, 
     .glass-card-dark .w-8, 
     .glass-card-dark .w-10, 
@@ -153,8 +151,8 @@
     .w-14.h-14,
     .w-10.h-10 {
         background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 50%, #CFC2E5 100%) !important;
-        border: 1.5px solid #FFFFFF !important;
-        box-shadow: 0 4px 12px -2px rgba(24, 11, 43, 0.16) !important;
+        border: 1.5px solid #FFF5FA !important;
+        box-shadow: 0 4px 12px -2px rgba(59, 26, 96, 0.08) !important;
         color: #3B1A60 !important;
     }
 
@@ -163,7 +161,7 @@
         stroke: #3B1A60 !important;
     }
 
-    /* 5. TYPOGRAPHY & CENTERED HIERARCHY */
+    /* 5. TYPOGRAPHY & CONTRAST (OUTFIT FOR HEADINGS, PLUS JAKARTA SANS FOR BODY) */
     h1, h2 {
         color: #180B2B !important;
         font-family: 'Outfit', sans-serif !important;
@@ -171,7 +169,7 @@
         letter-spacing: -0.015em !important;
         background: none !important;
         -webkit-text-fill-color: #180B2B !important;
-        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.6) !important;
+        text-shadow: none !important;
         text-align: center !important;
     }
 
@@ -181,8 +179,7 @@
         font-weight: 700 !important;
     }
 
-    p, li, label, div {
-        color: #2A1245 !important;
+    p, li, label, span {
         font-family: 'Plus Jakarta Sans', sans-serif !important;
     }
 
@@ -194,14 +191,15 @@
         color: #3B1A60 !important;
     }
 
-    /* 6. WHATSAPP BUTTONS (ALWAYS CLEAR GREEN) */
+    /* 6. WHATSAPP BUTTONS (CLEAR VIBRANT GREEN) */
     a[href*="wa.me"], .btn-whatsapp-vibrant {
         background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
         color: #FFFFFF !important;
-        border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
-        box-shadow: 0 8px 24px -4px rgba(37, 211, 102, 0.40) !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 0 8px 24px -4px rgba(37, 211, 102, 0.35) !important;
         border-radius: 9999px !important;
         font-weight: 700 !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
         transition: all 0.3s ease !important;
     }
 
@@ -213,7 +211,7 @@
     a[href*="wa.me"]:hover, .btn-whatsapp-vibrant:hover {
         background: linear-gradient(135deg, #22BF5B 0%, #0E7065 100%) !important;
         transform: translateY(-2px) scale(1.02) !important;
-        box-shadow: 0 12px 30px -4px rgba(37, 211, 102, 0.50) !important;
+        box-shadow: 0 12px 30px -4px rgba(37, 211, 102, 0.45) !important;
         border-color: #FFFFFF !important;
     }
 
@@ -221,8 +219,8 @@
     a[href="#valor"], a[href="#vinculos"] {
         background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 50%, #CFC2E5 100%) !important;
         color: #3B1A60 !important;
-        border: 1.5px solid #FFFFFF !important;
-        box-shadow: 0 6px 18px rgba(24, 11, 43, 0.14) !important;
+        border: 1.5px solid #FFF5FA !important;
+        box-shadow: 0 6px 18px rgba(59, 26, 96, 0.10) !important;
         border-radius: 9999px !important;
         font-weight: 700 !important;
     }
@@ -237,38 +235,46 @@
         background: linear-gradient(135deg, #180B2B 0%, #3B1A60 100%) !important;
         color: #FAF0F5 !important;
         border: 1.5px solid #F4E3EC !important;
-        box-shadow: 0 4px 12px rgba(24, 11, 43, 0.25) !important;
+        box-shadow: 0 4px 14px rgba(24, 11, 43, 0.25) !important;
+        font-family: 'Outfit', sans-serif !important;
         font-weight: 800 !important;
         text-transform: uppercase !important;
         letter-spacing: 0.08em !important;
-        padding: 0.4rem 1rem !important;
+        padding: 0.4rem 1.1rem !important;
         border-radius: 9999px !important;
     }
 
     /* 8. FOOTER STYLING */
     footer, .footer-section {
-        background: linear-gradient(145deg, rgba(250, 240, 245, 0.95) 0%, rgba(244, 227, 236, 0.90) 100%) !important;
+        background: linear-gradient(145deg, #FAF0F5 0%, #F4E3EC 100%) !important;
         border-top: 1.5px solid #FFF5FA !important;
-        padding: 3rem 1.5rem !important;
+        padding: 2.5rem 1.5rem !important;
         margin-top: 4rem !important;
         border-radius: 2rem 2rem 0 0 !important;
-        box-shadow: 0 -10px 30px rgba(24, 11, 43, 0.10) !important;
+        box-shadow: 0 -8px 24px rgba(59, 26, 96, 0.05) !important;
         text-align: center !important;
+    }
+
+    /* Sub-card backgrounds for investment details */
+    .bg-mystic-950\/80, .bg-mystic-900\/70, .bg-mystic-900\/90 {
+        background: rgba(244, 227, 236, 0.85) !important;
+        border: 1px solid rgba(255, 255, 255, 0.9) !important;
     }
 </style>
 </head>
 <body class="font-sans antialiased selection:bg-mystic-500 selection:text-white relative min-h-screen w-full overflow-x-hidden">
 <canvas id="starCanvas"></canvas>
 
+    <!-- Main Content Container -->
+    <div class="relative z-10 flex flex-col min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative pt-12 sm:pt-20 pb-12 sm:pb-16 px-4 sm:px-6 flex flex-col items-center justify-center text-center w-full">
+            <div class="max-w-4xl mx-auto w-full">
 
-    <!-- Background Aura Glows -->
-    
-                </div>
-
-                <!-- Sacred Tree of Life Medallion Artwork (0% black space) -->
+                <!-- Sacred Tree of Life Medallion Artwork (100% Zero Black Borders/Corners) -->
                 <div class="mb-6 sm:mb-8 flex justify-center items-center">
-                    <div class="relative mx-auto w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-2 border-white/95 shadow-[0_0_50px_rgba(246,220,232,0.9),0_0_25px_rgba(184,160,214,0.7)] transition-transform duration-500 hover:scale-105">
-                        <img src="images/arbol_vida.jpg" alt="Celeste Universo Consciente - Árbol de la Vida" class="w-full h-full object-cover scale-[1.08] rounded-full">
+                    <div class="relative mx-auto w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-2 border-white/90 bg-[#F4E3EC] shadow-[0_0_50px_rgba(244,227,236,0.9),0_0_25px_rgba(191,174,214,0.7)] transition-transform duration-500 hover:scale-105">
+                        <img src="images/arbol_vida.jpg" alt="Celeste Universo Consciente - Árbol de la Vida" class="w-full h-full object-cover scale-[1.22] rounded-full">
                     </div>
                 </div>
 
@@ -556,7 +562,7 @@
                             </div>
                         </div>
 
-                        <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20me%20gustar%C3%ADa%20consultar%20por%20V%C3%ADnculos%2C%20Hogar%2C%20Negocio%20o%20Mascotas." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl btn-purple-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center">
+                        <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20me%20gustar%C3%ADa%20consultar%20por%20V%C3%ADnculos%2C%20Hogar%2C%20Negocio%20o%20Mascotas." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl btn-whatsapp-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center shadow-lg hover:shadow-emerald-500/30">
                             <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0"></i>
                             <span class="truncate">Consultar por mi caso</span>
                         </a>
@@ -620,20 +626,20 @@
     });
 
     const particles = [];
-    const colors = ['#FFFFFF', '#F6DCE8', '#F1C9DB', '#FFF5FA'];
+    const colors = ['#FFFFFF', '#FFF0F7', '#F3D5E9', '#E6C8FB', '#FDF4FF'];
 
-    // 35 particles for subtle, non-intrusive sparkle effect
-    for (let i = 0; i < 35; i++) {
+    // 50 subtle floating particles & stars for delicate rain/sparkle effect
+    for (let i = 0; i < 50; i++) {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 1.6 + 0.5,
+            radius: Math.random() * 1.8 + 0.6,
             color: colors[Math.floor(Math.random() * colors.length)],
             alpha: Math.random() * 0.45 + 0.15,
-            speedAlpha: Math.random() * 0.006 + 0.002,
-            speedY: Math.random() * 0.12 + 0.02,
-            speedX: (Math.random() - 0.5) * 0.08,
-            isStar: Math.random() > 0.6
+            speedAlpha: Math.random() * 0.008 + 0.003,
+            speedY: Math.random() * 0.20 + 0.04,
+            speedX: (Math.random() - 0.5) * 0.10,
+            isStar: Math.random() > 0.55
         });
     }
 
@@ -672,7 +678,7 @@
             p.x += p.speedX;
             p.alpha += p.speedAlpha;
 
-            if (p.alpha > 0.70 || p.alpha < 0.15) {
+            if (p.alpha > 0.65 || p.alpha < 0.15) {
                 p.speedAlpha = -p.speedAlpha;
             }
 
