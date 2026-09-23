@@ -73,39 +73,42 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <style id="celeste-definitive-perfect-theme">
+    
+    
+    <style id="celeste-hero-image-theme">
     :root {
-        --lila-pastel-bg: #B8A0D6;
+        --rosa-pastel-claro: #FAF0F5;
+        --rosa-suave: #F4E3EC;
+        --lavanda-suave: #CFC2E5;
         --lila-pastel-mid: #A98BCB;
-        --rosa-pastel-card: #F1C9DB;
-        --rosa-pastel-card-mid: #E8B7CF;
-        --text-plum-dark: #2A1245;
-        --text-plum-deep: #180B2B;
-        --whatsapp-green-start: #25D366;
-        --whatsapp-green-end: #128C7E;
+        --lila-pastel-deep: #9678BA;
+        --lila-rich: #8B6EB0;
+        --deep-purple: #180B2B;
+        --rich-plum: #2A1245;
+        --mystic-purple: #3B1A60;
     }
 
-    /* 1. UNIFORM CONTINUOUS LILA PASTEL BACKGROUND (NO CUTS / NO DIVISIONS) */
+    /* 1. CONTINUOUS LILA PASTEL BACKGROUND (~2 TONES DEEPER & RICH) */
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
+        max-width: 100vw !important;
         margin: 0 !important;
         padding: 0 !important;
-        background: #B8A0D6 !important;
-        background-image: linear-gradient(180deg, #B8A0D6 0%, #A98BCB 50%, #B8A0D6 100%) !important;
+        background: linear-gradient(135deg, #9D7EC3 0%, #8E6FB7 35%, #B8A0D6 70%, #8364AD 100%) !important;
         background-attachment: fixed !important;
         color: #2A1245 !important;
-        font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
         font-size: 18px;
         line-height: 1.7;
     }
 
-    /* Remove any split background blobs or horizontal cut overlays */
     body::before, body::after, .glow-orb-1, .glow-orb-2, .aura-glow-vibrant {
         display: none !important;
+        content: none !important;
     }
 
-    /* 7. Subtle Star Canvas Particles */
+    /* 2. SUBTLE SPARKLES CANVAS */
     #starCanvas {
         position: fixed !important;
         top: 0 !important;
@@ -121,75 +124,80 @@
         z-index: 2;
     }
 
-    /* 2. ROSA PASTEL CARDS WITH HIGH CONTRAST */
-    .glass-card-dark, .featured-card, div[class*="glass-card"], div[class*="bg-mystic"], div[class*="bg-purple"] {
-        background: linear-gradient(145deg, #F1C9DB 0%, #E8B7CF 60%, #F6DCE8 100%) !important;
-        border: 1.5px solid #FFFFFF !important;
-        box-shadow: 0 14px 32px -6px rgba(42, 18, 69, 0.20), 0 0 16px 0 rgba(241, 201, 219, 0.35) !important;
+    /* 3. FROSTED GLASS PASTEL PINK CARDS (HIGH CONTRAST) */
+    .glass-card-dark, .featured-card, div[class*="glass-card"] {
+        background: linear-gradient(145deg, rgba(250, 240, 245, 0.96) 0%, rgba(244, 227, 236, 0.92) 50%, rgba(207, 194, 229, 0.85) 100%) !important;
+        border: 1.5px solid #FFF5FA !important;
+        box-shadow: 0 12px 30px -8px rgba(42, 18, 69, 0.16) !important;
         border-radius: 1.25rem !important;
         color: #2A1245 !important;
-        transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
     }
 
     .glass-card-dark:hover, .featured-card:hover {
         transform: translateY(-4px) !important;
-        box-shadow: 0 20px 40px -8px rgba(42, 18, 69, 0.28), 0 0 22px 0 rgba(232, 183, 207, 0.50) !important;
-        border-color: #FFFFFF !important;
+        border-color: #FAF0F5 !important;
+        box-shadow: 0 18px 36px -8px rgba(42, 18, 69, 0.24) !important;
     }
 
-    /* Text Colors for High Contrast */
-    p, span, li, td, th, label, div {
-        color: #2A1245 !important;
+    /* 4. ICON BADGES */
+    .glass-card-dark .w-12, 
+    .glass-card-dark .w-8, 
+    .glass-card-dark .w-10, 
+    .glass-card-dark .w-14,
+    .glass-card-dark .w-9,
+    .featured-card .w-12,
+    .icon-badge-pastel,
+    .w-12.h-12,
+    .w-14.h-14,
+    .w-10.h-10 {
+        background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 50%, #CFC2E5 100%) !important;
+        border: 1.5px solid #FFFFFF !important;
+        box-shadow: 0 4px 12px -2px rgba(42, 18, 69, 0.14) !important;
+        color: #3B1A60 !important;
     }
 
-    .text-mystic-100, .text-mystic-200, .text-mystic-300, .text-purple-200, .text-purple-300, .text-slate-300, .text-slate-400, .text-white {
-        color: #2A1245 !important;
+    svg, i, [data-lucide] {
+        color: #3B1A60 !important;
+        stroke: #3B1A60 !important;
     }
 
-    /* 4. TIPOGRAFÍA REFINADA & JERARQUÍA */
-    h1, h2, h3, h4, .font-serif, .gradient-title, .gradient-subtitle {
+    /* 5. TYPOGRAPHY & CENTERED HERO HIERARCHY */
+    h1, h2 {
         color: #180B2B !important;
         font-family: 'Outfit', sans-serif !important;
         font-weight: 800 !important;
         letter-spacing: -0.015em !important;
-        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6) !important;
         background: none !important;
         -webkit-text-fill-color: #180B2B !important;
+        text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5) !important;
     }
 
-    h1 {
-        font-size: clamp(2.3rem, 5.5vw, 3.8rem) !important;
-        line-height: 1.15 !important;
+    h3, h4, h5, h6, .font-serif {
+        color: #180B2B !important;
+        font-family: 'Outfit', sans-serif !important;
+        font-weight: 700 !important;
     }
 
-    h2 {
-        font-size: clamp(1.85rem, 4.2vw, 2.85rem) !important;
-        line-height: 1.2 !important;
+    p, li, label, div {
+        color: #2A1245 !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
     }
 
-    h3 {
-        font-size: clamp(1.35rem, 3.2vw, 1.9rem) !important;
+    .text-mystic-100, .text-mystic-200, .text-white {
+        color: #2A1245 !important;
     }
 
-    /* 3. INSIGNIA "SERVICIO PRINCIPAL" DESTAQUADA */
-    .featured-card .absolute, .badge-servicio-principal {
-        background: linear-gradient(135deg, #180B2B 0%, #32174F 100%) !important;
-        color: #F6DCE8 !important;
-        border: 1.5px solid #E8B7CF !important;
-        box-shadow: 0 4px 14px rgba(42, 18, 69, 0.30) !important;
-        font-weight: 800 !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.08em !important;
-        padding: 0.4rem 1rem !important;
-        border-radius: 9999px !important;
+    .gradient-subtitle, .text-mystic-300, .text-mystic-400 {
+        color: #3B1A60 !important;
     }
 
-    /* 5. BOTONES DE WHATSAPP - VERDE DE WHATSAPP PROFESIONAL */
+    /* 6. WHATSAPP BUTTONS (ALWAYS CLEAR GREEN) */
     a[href*="wa.me"], .btn-whatsapp-vibrant {
         background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
         color: #FFFFFF !important;
         border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
-        box-shadow: 0 10px 24px -4px rgba(37, 211, 102, 0.40) !important;
+        box-shadow: 0 8px 24px -4px rgba(37, 211, 102, 0.35) !important;
         border-radius: 9999px !important;
         font-weight: 700 !important;
         transition: all 0.3s ease !important;
@@ -203,57 +211,46 @@
     a[href*="wa.me"]:hover, .btn-whatsapp-vibrant:hover {
         background: linear-gradient(135deg, #22BF5B 0%, #0E7065 100%) !important;
         transform: translateY(-2px) scale(1.02) !important;
-        box-shadow: 0 14px 30px -4px rgba(37, 211, 102, 0.50) !important;
+        box-shadow: 0 12px 30px -4px rgba(37, 211, 102, 0.45) !important;
         border-color: #FFFFFF !important;
     }
 
-    /* Non-WhatsApp Secondary Buttons */
+    /* Secondary Action Buttons */
     a[href="#valor"], a[href="#vinculos"] {
-        background: linear-gradient(135deg, #32174F 0%, #180B2B 100%) !important;
-        color: #F6DCE8 !important;
-        border: 1.5px solid #E8B7CF !important;
-        box-shadow: 0 8px 20px -4px rgba(42, 18, 69, 0.30) !important;
+        background: linear-gradient(135deg, #FAF0F5 0%, #F4E3EC 50%, #CFC2E5 100%) !important;
+        color: #3B1A60 !important;
+        border: 1.5px solid #FFFFFF !important;
+        box-shadow: 0 6px 18px rgba(42, 18, 69, 0.12) !important;
         border-radius: 9999px !important;
         font-weight: 700 !important;
     }
 
     a[href="#valor"] *, a[href="#vinculos"] * {
-        color: #F6DCE8 !important;
-        stroke: #F6DCE8 !important;
+        color: #3B1A60 !important;
+        stroke: #3B1A60 !important;
     }
 
-    /* Icon Badges */
-    .glass-card-dark .w-12, 
-    .glass-card-dark .w-8, 
-    .glass-card-dark .w-10, 
-    .glass-card-dark .w-14,
-    .glass-card-dark .w-9,
-    .featured-card .w-12,
-    .icon-badge-pastel,
-    .w-12.h-12,
-    .w-14.h-14,
-    .w-10.h-10,
-    .w-24.h-24,
-    .w-28.h-28 {
-        background: linear-gradient(135deg, #E8B7CF 0%, #B8A0D6 100%) !important;
-        border: 1.5px solid #FFFFFF !important;
-        box-shadow: 0 4px 12px -2px rgba(42, 18, 69, 0.15) !important;
-        color: #2A1245 !important;
+    /* 7. HIGH-CONTRAST "SERVICIO PRINCIPAL" BADGE */
+    .featured-card .absolute, .badge-servicio-principal {
+        background: linear-gradient(135deg, #180B2B 0%, #3B1A60 100%) !important;
+        color: #FAF0F5 !important;
+        border: 1.5px solid #F4E3EC !important;
+        box-shadow: 0 4px 12px rgba(42, 18, 69, 0.20) !important;
+        font-weight: 800 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        padding: 0.4rem 1rem !important;
+        border-radius: 9999px !important;
     }
 
-    svg, i, [data-lucide] {
-        color: #2A1245 !important;
-        stroke: #2A1245 !important;
-    }
-
-    /* 6. CLEAN & ORDERED FOOTER STYLING */
+    /* 8. FOOTER STYLING */
     footer, .footer-section {
-        background: linear-gradient(145deg, #F1C9DB 0%, #E8B7CF 100%) !important;
-        border-top: 1.5px solid #FFFFFF !important;
+        background: linear-gradient(145deg, rgba(250, 240, 245, 0.95) 0%, rgba(244, 227, 236, 0.90) 100%) !important;
+        border-top: 1.5px solid #FFF5FA !important;
         padding: 3rem 1.5rem !important;
         margin-top: 4rem !important;
         border-radius: 2rem 2rem 0 0 !important;
-        box-shadow: 0 -10px 30px rgba(42, 18, 69, 0.12) !important;
+        box-shadow: 0 -10px 30px rgba(42, 18, 69, 0.08) !important;
         text-align: center !important;
     }
 </style>
@@ -263,40 +260,13 @@
 
 
     <!-- Background Aura Glows -->
-    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0 w-full h-full">
-        <div class="aura-glow-vibrant w-[600px] h-[600px] bg-mystic-600/40 -top-30 -left-30"></div>
-        <div class="aura-glow-vibrant w-[700px] h-[700px] bg-mystic-500/30 top-[30%] -right-40"></div>
-        <div class="aura-glow-vibrant w-[650px] h-[650px] bg-mystic-700/40 bottom-10 left-10"></div>
-    </div>
-
-    <!-- Main Outer Container -->
-    <div class="relative z-10 w-full max-w-full overflow-x-hidden">
-
-        <!-- Header / Navigation -->
-        <header class="w-full pt-6 px-4 sm:px-6">
-            <div class="max-w-4xl mx-auto flex items-center justify-between py-3.5 px-4 sm:px-6 rounded-full glass-card-dark">
-                <div class="flex items-center gap-2.5 sm:gap-3 shrink min-w-0">
-                    <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-mystic-700/60 border border-mystic-400/50 flex items-center justify-center text-mystic-200 shadow-inner shrink-0">
-                        <i data-lucide="sparkles" class="w-4 h-4 sm:w-5 sm:h-5"></i>
-                    </div>
-                    <span class="font-serif tracking-wider text-xs sm:text-sm text-white uppercase font-bold truncate">Celeste Universo Consciente</span>
+    
                 </div>
-                <a href="#valor" class="text-[11px] sm:text-xs uppercase tracking-wider font-semibold text-mystic-200 hover:text-white transition-colors bg-mystic-800/80 px-3 sm:px-4 py-2 rounded-full border border-mystic-500/40 hover:border-mystic-300 shrink-0">
-                    Sesiones
-                </a>
-            </div>
-        </header>
 
-        <!-- Hero Section -->
-        <section class="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 relative w-full">
-            <div class="max-w-3xl mx-auto text-center w-full">
-                
-                <!-- Orbe Místico Energético -->
-                <div class="mb-6 sm:mb-8 inline-block animate-orb">
-                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-mystic-700 via-mystic-500 to-mystic-300 p-1 shadow-[0_0_50px_rgba(163,75,240,0.6)]">
-                        <div class="w-full h-full rounded-full bg-mystic-950 flex items-center justify-center border border-mystic-300/30">
-                            <i data-lucide="sparkle" class="w-12 h-12 text-mystic-200 text-glow"></i>
-                        </div>
+                <!-- Sacred Tree of Life Medallion Artwork (0% black space) -->
+                <div class="mb-6 sm:mb-8 flex justify-center items-center">
+                    <div class="relative mx-auto w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-2 border-white/95 shadow-[0_0_50px_rgba(246,220,232,0.9),0_0_25px_rgba(184,160,214,0.7)] transition-transform duration-500 hover:scale-105">
+                        <img src="images/arbol_vida.jpg" alt="Celeste Universo Consciente - Árbol de la Vida" class="w-full h-full object-cover scale-[1.08] rounded-full">
                     </div>
                 </div>
 
@@ -633,6 +603,7 @@
     </script>
 
 
+
 <script id="star-particles-js">
 (function() {
     const canvas = document.getElementById('starCanvas');
@@ -649,17 +620,17 @@
     const particles = [];
     const colors = ['#FFFFFF', '#F6DCE8', '#F1C9DB', '#FFF5FA'];
 
-    // 40 particles for subtle, non-intrusive sparkle effect
-    for (let i = 0; i < 40; i++) {
+    // 35 particles for subtle, non-intrusive sparkle effect
+    for (let i = 0; i < 35; i++) {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 1.8 + 0.6,
+            radius: Math.random() * 1.6 + 0.5,
             color: colors[Math.floor(Math.random() * colors.length)],
-            alpha: Math.random() * 0.5 + 0.15,
-            speedAlpha: Math.random() * 0.008 + 0.002,
-            speedY: Math.random() * 0.15 + 0.03,
-            speedX: (Math.random() - 0.5) * 0.1,
+            alpha: Math.random() * 0.45 + 0.15,
+            speedAlpha: Math.random() * 0.006 + 0.002,
+            speedY: Math.random() * 0.12 + 0.02,
+            speedX: (Math.random() - 0.5) * 0.08,
             isStar: Math.random() > 0.6
         });
     }
@@ -699,7 +670,7 @@
             p.x += p.speedX;
             p.alpha += p.speedAlpha;
 
-            if (p.alpha > 0.75 || p.alpha < 0.15) {
+            if (p.alpha > 0.70 || p.alpha < 0.15) {
                 p.speedAlpha = -p.speedAlpha;
             }
 
@@ -724,6 +695,7 @@
     animate();
 })();
 </script>
+
 
 
 </body>
