@@ -192,26 +192,48 @@
     }
 
     /* 6. WHATSAPP BUTTONS (CLEAR VIBRANT GREEN) */
-    a[href*="wa.me"], .btn-whatsapp-vibrant {
+    .btn-whatsapp-vibrant {
         background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
         color: #FFFFFF !important;
         border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
         box-shadow: 0 8px 24px -4px rgba(37, 211, 102, 0.35) !important;
-        border-radius: 9999px !important;
         font-weight: 700 !important;
         font-family: 'Plus Jakarta Sans', sans-serif !important;
         transition: all 0.3s ease !important;
     }
 
-    a[href*="wa.me"] *, .btn-whatsapp-vibrant * {
+    .btn-whatsapp-vibrant * {
         color: #FFFFFF !important;
         stroke: #FFFFFF !important;
     }
 
-    a[href*="wa.me"]:hover, .btn-whatsapp-vibrant:hover {
+    .btn-whatsapp-vibrant:hover {
         background: linear-gradient(135deg, #22BF5B 0%, #0E7065 100%) !important;
         transform: translateY(-2px) scale(1.02) !important;
         box-shadow: 0 12px 30px -4px rgba(37, 211, 102, 0.45) !important;
+        border-color: #FFFFFF !important;
+    }
+
+    /* 7. BOTONES CONSULTAR SERVICIO (ROSADO PASTEL ELEGANTE Y SOFISTICADO) */
+    .btn-pink-pastel {
+        background: linear-gradient(135deg, #F9E3EE 0%, #F3D4E4 50%, #ECC2D7 100%) !important;
+        color: #2A1245 !important;
+        border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+        box-shadow: 0 6px 20px -4px rgba(236, 194, 214, 0.5) !important;
+        font-weight: 700 !important;
+        font-family: 'Plus Jakarta Sans', sans-serif !important;
+        transition: all 0.3s ease !important;
+    }
+
+    .btn-pink-pastel * {
+        color: #2A1245 !important;
+        stroke: #2A1245 !important;
+    }
+
+    .btn-pink-pastel:hover {
+        background: linear-gradient(135deg, #F6D6E6 0%, #EEBFD7 50%, #E3ACCA 100%) !important;
+        transform: translateY(-2px) scale(1.02) !important;
+        box-shadow: 0 10px 25px -4px rgba(236, 194, 214, 0.7) !important;
         border-color: #FFFFFF !important;
     }
 
@@ -290,15 +312,10 @@
                     Trabajamos energéticamente sobre la vibración de tus relaciones, espacio y persona para disolver cargas sutiles, recuperar la paz y favorecer un nuevo equilibrio.
                 </p>
 
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full max-w-md sm:max-w-none mx-auto">
-                    <a href="#vinculos" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full glass-card-dark text-white text-sm font-semibold tracking-wide uppercase transition-all group">
+                <div class="flex justify-center w-full mx-auto">
+                    <a href="#vinculos" class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full glass-card-dark text-white text-sm font-semibold tracking-wide uppercase transition-all group">
                         <span>Conoce el abordaje</span>
                         <i data-lucide="chevron-down" class="w-4 h-4 text-mystic-300 group-hover:translate-y-1 transition-transform"></i>
-                    </a>
-                    
-                    <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20estoy%20interesada%20en%20la%20Limpieza%20y%20Armonizaci%C3%B3n%20Energ%C3%A9tica." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full btn-whatsapp-vibrant text-sm font-bold tracking-wide uppercase">
-                        <i data-lucide="message-circle" class="w-5 h-5"></i>
-                        <span>Consultar por WhatsApp</span>
                     </a>
                 </div>
 
@@ -478,30 +495,45 @@
         <section id="valor" class="py-12 sm:py-16 px-4 sm:px-6 w-full">
             <div class="max-w-6xl mx-auto w-full">
                 
-                <div class="text-center mb-10 sm:mb-12">
+                <div class="text-center mb-8 sm:mb-10">
                     <span class="text-mystic-200 text-xs uppercase tracking-widest font-bold bg-mystic-800/80 px-4 py-1.5 rounded-full border border-mystic-500/50">Inversión y Propuestas</span>
                     <h2 class="font-serif text-3xl sm:text-4xl gradient-title mt-4 font-bold text-glow">Valor del Servicio</h2>
+                    
+                    <!-- SELECTOR GLOBAL DE MONEDA (ARS / USD) CON ESTILO EDITORIAL CLARO Y ULTRALEGIBLE -->
+                    <div class="mt-6 inline-flex bg-[#FAF0F5]/90 p-1.5 rounded-full border border-white/80 shadow-md gap-1.5" role="radiogroup" aria-label="Selección de moneda">
+                        <button type="button" id="currency-btn-ars" onclick="setCurrency('ARS')" aria-checked="true" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#1D0A34] bg-[#D7BAE4] border border-[#B78AD3] shadow-sm transition-all duration-300 cursor-pointer">
+                            ARS (ARGENTINA)
+                        </button>
+                        <button type="button" id="currency-btn-usd" onclick="setCurrency('USD')" aria-checked="false" class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-[#543970] hover:text-[#1D0A34] bg-transparent border border-transparent transition-all duration-300 cursor-pointer">
+                            USD (EXTERIOR)
+                        </button>
+                    </div>
                 </div>
 
                 <div class="grid lg:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-10 w-full">
                     
                     <!-- Tarjeta 01: Sesión Individual -->
-                    <div class="featured-card p-5 sm:p-7 pt-10 sm:pt-8 rounded-3xl flex flex-col justify-between relative transition-all duration-300 hover:scale-[1.01] overflow-hidden w-full">
+                    <div class="featured-card p-6 sm:p-8 pt-10 sm:pt-9 rounded-3xl flex flex-col justify-between relative transition-all duration-300 hover:scale-[1.01] overflow-hidden w-full">
                         
                         <!-- Insignia Destacada -->
-                        <div class="absolute top-0 right-0 bg-gradient-to-l from-mystic-400 to-mystic-600 text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-1.5 rounded-bl-2xl shadow-md z-10">
+                        <div class="absolute top-0 right-0 bg-gradient-to-l from-mystic-400 to-mystic-600 text-white text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-bl-2xl shadow-md z-10">
                             Servicio Principal
                         </div>
 
                         <div class="w-full">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="font-serif text-xl sm:text-2xl font-bold text-mystic-300">01</span>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-serif text-2xl sm:text-3xl font-bold text-mystic-300 tracking-wider">01</span>
                             </div>
 
-                            <h3 class="font-serif text-2xl font-bold text-white mb-2">SESIÓN INDIVIDUAL</h3>
+                            <h3 class="font-serif text-2xl font-bold text-white mb-2 leading-snug">SESIÓN INDIVIDUAL</h3>
 
-                            <div class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-mystic-200 bg-mystic-900/90 px-3 sm:px-3.5 py-1.5 rounded-full border border-mystic-400/40 mb-4 max-w-full">
-                                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-mystic-300 shrink-0"></i>
+                            <!-- Cápsula Editorial Minimalista: Abordaje Específico con Ícono Lineal de Capas Apiladas (Layers) -->
+                            <div class="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-mystic-200 bg-mystic-900/60 px-3.5 py-1.5 rounded-full border border-mystic-400/40 mb-4 max-w-full shadow-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-mystic-300 shrink-0">
+                                    <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/>
+                                    <path d="m22 12.5-8.58 3.91a2 2 0 0 1-1.66 0L3.18 12.5"/>
+                                    <path d="m22 17.5-8.58 3.91a2 2 0 0 1-1.66 0L3.18 17.5"/>
+                                </svg>
                                 <span class="truncate">Abordaje Específico</span>
                             </div>
 
@@ -513,38 +545,31 @@
                         <div class="w-full">
                             <div class="h-px w-full bg-gradient-to-r from-transparent via-mystic-400/40 to-transparent my-4"></div>
 
-                            <!-- Precio Destacado -->
-                            <div class="p-4 rounded-2xl bg-mystic-950/80 border border-mystic-500/40 shadow-inner mb-6 w-full">
-                                <span class="text-[10px] sm:text-[11px] uppercase tracking-widest text-mystic-300 block mb-1 font-semibold">Inversión por sesión</span>
-                                <div class="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight flex flex-wrap items-baseline gap-1.5">
-                                    <span>$50.000</span> <span class="text-xs font-sans font-normal text-mystic-200">ARS</span>
-                                </div>
-                                <div class="text-xs text-mystic-200 font-medium mt-1">
-                                    o <span class="text-white font-bold">USD 65</span> <span class="text-[11px] text-mystic-300 font-light block sm:inline">(para el exterior)</span>
+                            <!-- Bloque de Precio con Espaciado Amplio y Aireado -->
+                            <div class="p-6 sm:p-7 rounded-2xl bg-mystic-950/80 border border-mystic-500/40 shadow-inner my-6 w-full">
+                                <span class="text-[11px] uppercase tracking-widest text-mystic-300 block mb-2 font-semibold">Inversión por sesión</span>
+                                <div class="font-serif text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex items-baseline gap-2">
+                                    <span id="card-price-val-1" class="transition-all duration-200">$50.000</span>
+                                    <span id="card-price-curr-1" class="text-xs font-sans font-normal text-mystic-200">ARS</span>
                                 </div>
                             </div>
 
-                            <!-- Botón WhatsApp -->
-                            <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20estoy%20interesada%20en%20agendar%20la%20Sesi%C3%B3n%20Individual%20(%2450.000%20ARS%20%2F%20USD%2065)." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl btn-whatsapp-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center shadow-lg hover:shadow-emerald-500/30">
-                                <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0"></i>
-                                <span class="truncate">Agendar Sesión</span>
+                            <!-- Botón CTA Principal (Acción Verde Vibrante Intacto) -->
+                            <a href="https://wa.me/5491154581020?text=Hola%20Celeste%20%E2%9C%A8%F0%9F%9F%A3%0AEstoy%20interesada%20en%20agendar%20una%20Sesi%C3%B3n%20Individual%20de%20Limpieza%20y%20reprogramaci%C3%B3n%20energ%C3%A9tica%20sesi%C3%B3n%20personalizada.%0ALa%20inversi%C3%B3n%20correspondiente%20es%20de%20%2450.000%20ARS%20%2F%20USD%2065.%0AMe%20gustar%C3%ADa%20coordinar%20la%20sesi%C3%B3n%20contigo.%20%E2%9C%A8" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 rounded-2xl btn-whatsapp-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center shadow-lg hover:shadow-emerald-500/30">
+                                <span>AGENDAR SESIÓN</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Tarjeta 02: Armonización de Vínculos -->
-                    <div class="glass-card-dark p-5 sm:p-7 rounded-3xl flex flex-col justify-between w-full">
+                    <div class="glass-card-dark p-6 sm:p-8 pt-10 sm:pt-9 rounded-3xl flex flex-col justify-between w-full relative transition-all duration-300 hover:scale-[1.01]">
                         <div class="w-full">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="font-serif text-xl sm:text-2xl font-bold text-mystic-300">02</span>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-serif text-2xl sm:text-3xl font-bold text-mystic-300 tracking-wider">02</span>
                             </div>
 
-                            <h3 class="font-serif text-2xl font-bold text-white mb-2">ARMONIZACIÓN DE VÍNCULOS</h3>
-
-                            <div class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-mystic-200 bg-mystic-900/80 px-3 sm:px-3.5 py-1.5 rounded-full border border-mystic-600/50 mb-4 max-w-full">
-                                <i data-lucide="layers" class="w-3.5 h-3.5 text-mystic-400 shrink-0"></i>
-                                <span class="truncate">Abordaje Específico</span>
-                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-white mb-4 leading-snug">ARMONIZACIÓN DE VÍNCULOS</h3>
 
                             <p class="text-sm text-mystic-100/80 font-light leading-relaxed mb-6">
                                 Armonización energética enfocada en vínculos y relaciones.
@@ -554,38 +579,33 @@
                         <div class="w-full">
                             <div class="h-px w-full bg-gradient-to-r from-transparent via-mystic-400/40 to-transparent my-4"></div>
 
-                            <!-- Bloque de Precio -->
-                            <div class="p-4 rounded-2xl bg-mystic-900/70 border border-mystic-600/50 shadow-inner mb-6 w-full">
-                                <span class="text-[10px] sm:text-[11px] uppercase tracking-widest text-mystic-300 block mb-1 font-semibold">Tarifa del Servicio</span>
-                                <div class="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight flex flex-wrap items-baseline gap-1.5">
-                                    <span>$50.000</span> <span class="text-xs font-sans font-normal text-mystic-200">ARS</span>
-                                </div>
-                                <div class="text-xs text-mystic-200 font-medium mt-1">
-                                    o <span class="text-white font-bold">USD 80</span> <span class="text-[11px] text-mystic-300 font-light block sm:inline">(para el exterior)</span>
+                            <!-- Bloque de Precio con Espaciado Amplio y Aireado -->
+                            <div class="p-6 sm:p-7 rounded-2xl bg-mystic-900/70 border border-mystic-600/50 shadow-inner my-6 w-full">
+                                <span class="text-[11px] uppercase tracking-widest text-mystic-300 block mb-2 font-semibold">Tarifa del Servicio</span>
+                                <div class="font-serif text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex items-baseline gap-2">
+                                    <span id="card-price-val-2" class="transition-all duration-200">$50.000</span>
+                                    <span id="card-price-curr-2" class="text-xs font-sans font-normal text-mystic-200">ARS</span>
                                 </div>
                             </div>
 
-                            <!-- Botón WhatsApp -->
-                            <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20estoy%20interesada%20en%20la%20Armonizaci%C3%B3n%20de%20v%C3%ADnculos%20(%2450.000%20ARS%20%2F%20USD%2080)." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl btn-whatsapp-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center shadow-lg hover:shadow-emerald-500/30">
-                                <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0"></i>
-                                <span class="truncate">Consultar por WhatsApp</span>
+                            <!-- Botón CTA Consulta (Estilo Unificado Verde/Turquesa Vibrante) -->
+                            <a href="https://wa.me/5491154581020?text=Hola%20Celeste%20%E2%9C%A8%F0%9F%9F%A3%0AEstoy%20interesada%20en%20agendar%20una%20Armonizaci%C3%B3n%20de%20v%C3%ADnculos.%0ALa%20inversi%C3%B3n%20correspondiente%20es%20de%20%2450.000%20ARS%20%2F%20USD%2080.%0AMe%20gustar%C3%ADa%20coordinar%20la%20sesi%C3%B3n%20contigo.%20%E2%9C%A8" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 rounded-2xl btn-whatsapp-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center shadow-lg hover:shadow-emerald-500/30">
+                                <span>CONSULTAR SERVICIO</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Tarjeta 03: Limpieza y Armonización de Vínculos -->
-                    <div class="glass-card-dark p-5 sm:p-7 rounded-3xl flex flex-col justify-between w-full">
+                    <div class="glass-card-dark p-6 sm:p-8 pt-10 sm:pt-9 rounded-3xl flex flex-col justify-between w-full relative transition-all duration-300 hover:scale-[1.01]">
                         <div class="w-full">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="font-serif text-xl sm:text-2xl font-bold text-mystic-300">03</span>
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-serif text-2xl sm:text-3xl font-bold text-mystic-300 tracking-wider">03</span>
                             </div>
 
-                            <h3 class="font-serif text-2xl font-bold text-white mb-2">LIMPIEZA Y ARMONIZACIÓN DE VÍNCULOS</h3>
-
-                            <div class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-mystic-200 bg-mystic-900/80 px-3 sm:px-3.5 py-1.5 rounded-full border border-mystic-600/50 mb-4 max-w-full">
-                                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-mystic-400 shrink-0"></i>
-                                <span class="truncate">Abordaje Específico</span>
-                            </div>
+                            <h3 class="font-serif text-2xl font-bold text-white mb-4 leading-tight">
+                                LIMPIEZA Y<br>ARMONIZACIÓN DE<br>VÍNCULOS
+                            </h3>
 
                             <p class="text-sm text-mystic-100/80 font-light leading-relaxed mb-6">
                                 Limpieza y armonización energética del vínculo.
@@ -595,21 +615,19 @@
                         <div class="w-full">
                             <div class="h-px w-full bg-gradient-to-r from-transparent via-mystic-400/40 to-transparent my-4"></div>
 
-                            <!-- Bloque de Precio -->
-                            <div class="p-4 rounded-2xl bg-mystic-900/70 border border-mystic-600/50 shadow-inner mb-6 w-full">
-                                <span class="text-[10px] sm:text-[11px] uppercase tracking-widest text-mystic-300 block mb-1 font-semibold">Tarifa del Servicio</span>
-                                <div class="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight flex flex-wrap items-baseline gap-1.5">
-                                    <span>$90.000</span> <span class="text-xs font-sans font-normal text-mystic-200">ARS</span>
-                                </div>
-                                <div class="text-xs text-mystic-200 font-medium mt-1">
-                                    o <span class="text-white font-bold">USD 130</span> <span class="text-[11px] text-mystic-300 font-light block sm:inline">(para el exterior)</span>
+                            <!-- Bloque de Precio con Espaciado Amplio y Aireado -->
+                            <div class="p-6 sm:p-7 rounded-2xl bg-mystic-900/70 border border-mystic-600/50 shadow-inner my-6 w-full">
+                                <span class="text-[11px] uppercase tracking-widest text-mystic-300 block mb-2 font-semibold">Tarifa del Servicio</span>
+                                <div class="font-serif text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex items-baseline gap-2">
+                                    <span id="card-price-val-3" class="transition-all duration-200">$90.000</span>
+                                    <span id="card-price-curr-3" class="text-xs font-sans font-normal text-mystic-200">ARS</span>
                                 </div>
                             </div>
 
-                            <!-- Botón WhatsApp -->
-                            <a href="https://wa.me/5491154581020?text=Hola%20Celeste%2C%20estoy%20interesada%20en%20la%20Limpieza%20y%20armonizaci%C3%B3n%20de%20v%C3%ADnculos%20(%2490.000%20ARS%20%2F%20USD%20130)." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 sm:py-4 px-4 sm:px-6 rounded-2xl btn-whatsapp-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center shadow-lg hover:shadow-emerald-500/30">
-                                <i data-lucide="message-circle" class="w-4 h-4 sm:w-5 sm:h-5 shrink-0"></i>
-                                <span class="truncate">Consultar por WhatsApp</span>
+                            <!-- Botón CTA Consulta (Estilo Unificado Verde/Turquesa Vibrante) -->
+                            <a href="https://wa.me/5491154581020?text=Hola%20Celeste%20%E2%9C%A8%F0%9F%9F%A3%0AEstoy%20interesada%20en%20agendar%20una%20Limpieza%20y%20armonizaci%C3%B3n%20de%20v%C3%ADnculos.%0ALa%20inversi%C3%B3n%20correspondiente%20es%20de%20%2490.000%20ARS%20%2F%20USD%20130.%0AMe%20gustar%C3%ADa%20coordinar%20la%20sesi%C3%B3n%20contigo.%20%E2%9C%A8" target="_blank" rel="noopener noreferrer" class="w-full py-4 px-6 rounded-2xl btn-whatsapp-vibrant text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 text-center shadow-lg hover:shadow-emerald-500/30">
+                                <span>CONSULTAR SERVICIO</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4 shrink-0"></i>
                             </a>
                         </div>
                     </div>
@@ -634,11 +652,64 @@
             </div>
         </section>
 
+        <!-- Lógica Interactiva del Selector de Moneda (ARS / USD) -->
+        <script>
+            const currencyPrices = {
+                ARS: [
+                    { main: '$50.000', curr: 'ARS' },
+                    { main: '$50.000', curr: 'ARS' },
+                    { main: '$90.000', curr: 'ARS' }
+                ],
+                USD: [
+                    { main: 'USD 65', curr: '(exterior)' },
+                    { main: 'USD 80', curr: '(exterior)' },
+                    { main: 'USD 130', curr: '(exterior)' }
+                ]
+            };
+
+            function setCurrency(mode) {
+                const btnArs = document.getElementById('currency-btn-ars');
+                const btnUsd = document.getElementById('currency-btn-usd');
+                if (!btnArs || !btnUsd) return;
+
+                const activeClass = "px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-[#1D0A34] bg-[#D7BAE4] border border-[#B78AD3] shadow-sm transition-all duration-300 cursor-pointer";
+                const inactiveClass = "px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-[#543970] hover:text-[#1D0A34] bg-transparent border border-transparent transition-all duration-300 cursor-pointer";
+
+                if (mode === 'ARS') {
+                    btnArs.className = activeClass;
+                    btnUsd.className = inactiveClass;
+                    btnArs.setAttribute('aria-checked', 'true');
+                    btnUsd.setAttribute('aria-checked', 'false');
+                } else {
+                    btnUsd.className = activeClass;
+                    btnArs.className = inactiveClass;
+                    btnUsd.setAttribute('aria-checked', 'true');
+                    btnArs.setAttribute('aria-checked', 'false');
+                }
+
+                for (let i = 1; i <= 3; i++) {
+                    const data = currencyPrices[mode][i - 1];
+                    const mainEl = document.getElementById(`card-price-val-${i}`);
+                    const currEl = document.getElementById(`card-price-curr-${i}`);
+                    if (mainEl && currEl) {
+                        mainEl.style.opacity = '0';
+                        setTimeout(() => {
+                            mainEl.textContent = data.main;
+                            currEl.textContent = data.curr;
+                            mainEl.style.opacity = '1';
+                        }, 100);
+                    }
+                }
+            }
+        </script>
+
         <!-- Footer -->
         <footer class="py-8 sm:py-10 px-4 sm:px-6 border-t border-mystic-800/80 text-center text-xs sm:text-sm text-mystic-300/70 font-light w-full">
             <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 w-full">
-                <div class="flex items-center gap-2">
-                    <i data-lucide="sparkles" class="w-4 h-4 text-mystic-400"></i>
+                <div class="flex items-center gap-2.5">
+                    <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden border border-white/70 bg-[#F4E3EC] shrink-0 flex items-center justify-center shadow-xs">
+                        <img src="images/arbol_vida.jpg" alt="Celeste - Árbol de la Vida" class="w-full h-full object-cover scale-[1.22] rounded-full">
+                    </div>
                     <span class="font-serif text-xs sm:text-sm font-semibold text-white">Celeste Universo Consciente</span>
                 </div>
                 <p>© 2026 Celeste Universo Consciente. Todos los derechos reservados.</p>
